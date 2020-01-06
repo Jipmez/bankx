@@ -1,5 +1,10 @@
 <?php
-class HandleSql{
+
+require "vendor/autoload.php";
+
+
+
+class HandleSql extends refunct{
     public $conn_str;
     public $select;
 
@@ -20,15 +25,36 @@ class HandleSql{
     }
 
     public function selectQuery($table, $column,$where=""){
-        $this->select = $this->runQuery("SELECT $column FROM $table $where ") or die($this->conn_str->error);
+        $this->select = $this->runQuery("SELECT  $column FROM $table $where ") or die($this->conn_str->error);
         //echo $this->select->num_rows<1?"nothing found":"something found";
     }
-    public function selectQueryL($table, $column,$where="",$limit){
-        $this->select = $this->runQuery("SELECT $column FROM $table $where limit $limit") or die($this->conn_str->error);
+    public function selectQueryL($table, $column,$where="",$id,$limit){
+        $this->select = $this->runQuery("SELECT $column FROM $table $where ORDER BY $id DESC limit $limit") or die($this->conn_str->error);
         //echo $this->select->num_rows<1?"nothing found":"something found";
     }
+    public function selectQueryLM($table, $column,$where="",$id,$limit){
+      $this->select = $this->runQuery("SELECT $column FROM $table $where ORDER BY $id  limit $limit") or die($this->conn_str->error);
+      //echo $this->select->num_rows<1?"nothing found":"something found";
+  }
+  
+    public function selectQueryDESC($table, $column,$where="",$id){
+      $this->select = $this->runQuery("SELECT $column FROM $table $where  ORDER BY $id DESC") or die($this->conn_str->error);
+      //echo $this->select->num_rows<1?"nothing found":"something found";
+  }
 
+    public function naturalJoin($table,$column,$table2,$where,$where2,$id,$limit){
+        $this->select = $this->runQuery("SELECT $column FROM $table inner join  $table2  on $where $where2   ORDER BY $id LIMIT $limit") or die($this->conn_str->error);        
+    } 
 
+    public function selectJoin($column,$table,$table2,$where,$where2){
+        $this->select = $this->runQuery("SELECT $column FROM $table inner join $table2 on $where where $where2") or die($this->conn_str->error);
+    }
+
+    public function selectOrder($table, $column,$where="",$id){
+      $this->select = $this->runQuery("SELECT $column FROM $table $where ORDER BY $id") or die($this->conn_str->error);
+      //echo $this->select->num_rows<1?"nothing found":"something found";
+    }
+   
     public function countQuery($table,$where){
         $this->select = $this->runQuery("SELECT COUNT(*) FROM $table $where ") or die($this->conn_str->error);
     }
@@ -48,6 +74,18 @@ class HandleSql{
       return  $this->runQuery("UPDATE $table SET $set $where");
     }
 
+
+    /*
+*this method replaces value in th database
+*/
+public function replace($table,$column,$inserts){
+  $query=$this->runQuery("REPLACE INTO  $table ($column) VALUES ($inserts)")or die($this->conn_str->error);
+  return $query?true:false;
+}
+
+public function delete($table,$where){
+  return $this->runQuery("DELETE FROM $table $where");
+}
     /**
     *THIS METHOD COUNTS THE TOTAL NUMBER OF ROWS FOUND IN THE DATABASE
     */
@@ -77,7 +115,7 @@ public function convertMeToString($glue,$arr){
 
 
 public function between($column,$table,$where){
-    $this->select = $this->runQuery("SELECT $column FROM $table $where") or die($this->conn_str->error);
+    $this->select = $this->runQuery("SELECT $column FROM $table $where ") or die($this->conn_str->error);
 }
 
 /**
@@ -94,11 +132,20 @@ public function between($column,$table,$where){
     }
 
 
-    public function firstAsc($table, $column,$where="",$id,$limit){
-        $this->select = $this->runQuery("SELECT $column FROM $table $where ORDER BY $id ASC LIMIT $limit") or die($this->conn_str->error);
+    public function selJoin($column,$table,$table2,$where,$where2,$id){
+        $this->select = $this->runQuery("SELECT $column FROM $table inner join  $table2 on $where where $where2 ORDER BY $id ASC") or die($this->conn_str->error);
     }
 
-    public function lastDsc($table, $column,$where,$id,$limit){
+
+    public function firstAsc($table, $column,$where="",$id){
+        $this->select = $this->runQuery("SELECT $column FROM $table $where  ORDER BY $id ASC") or die($this->conn_str->error);
+    }
+
+    public function firstAscc($table, $column,$where="",$id,$limit=""){
+        $this->select = $this->runQuery("SELECT $column FROM $table $where  ORDER BY $id ASC LIMIT $limit") or die($this->conn_str->error);
+    }
+
+    public function lastDsc($table, $column,$where="",$id, $limit){
         $this->select = $this->runQuery("SELECT $column FROM $table $where ORDER BY $id DESC LIMIT $limit") or die($this->conn_str->error);
     }
 
@@ -122,6 +169,8 @@ public function hash_pword($hashme){
 
 
 
+
+
 /**
 *this method takes an assoc array as an argument
 * it is used to clean userinputs/hash password
@@ -139,6 +188,22 @@ public function hash_pword($hashme){
          return $cleaned_output;
      
     }
+
+    public function neat($dirty){
+        $cleaned_output=array();
+        foreach($dirty as $key=>$value){
+            if($key=='password'){
+                $cleaned_output[$key]=$this->conn_str->real_escape_string($this->hash_pword($value));
+               
+            }else{
+            $clean_me=$this->conn_str->real_escape_string($value);
+            $cleaned_output[$key]=$clean_me;
+           }
+         
+        }
+            return $cleaned_output;
+        
+       }
 
 
     public function pregmatch($value){
@@ -162,9 +227,174 @@ public function hash_pword($hashme){
      return $email;
         }
 }
+}
+
+/**
+*handelsql ends
+
+
+*  class refunct (reusable functions)
+*/
+
+class refunct {   
+ public function random_alphanumeric($length) {
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345689';
+    $my_string = '';
+    for ($i = 0; $i < $length; $i++) {
+      $pos = mt_rand(0, strlen($chars) -1);
+      $my_string .= substr($chars, $pos, 1);
+    }
+    return $my_string;
+  }
+
+  public function Verifypix($file)
+  {
+    $errors = [];
+    $file_name = $file['name'];
+    $file_size = $file['size'];
+    $file_tmp =  $file['tmp_name'];
+    $file_type=  $file['type'];
+    $file_ext= strtolower(pathinfo($file_name,PATHINFO_EXTENSION));
+    $extension = array("jpeg","jpg","png","gif");
+    $bytes = 1024;
+    $allowedKB = 100;
+    $totalBytes = $allowedKB * $bytes;
+    $path = 'c:\xampp\htdocs\lodges\images/';
+    
+    if(!in_array($file_ext, $extension)){
+      array_push($errors, "File type is invalid, Please select image only.");
+      return  2;
+   }
+
+    /*  if($file_size > $totalBytes){
+      array_push($errors, "File size must be less than 100KB!!!");
+      return 4;
+  }  */ 
+   if(file_exists("$path".$file_name))
+    {
+        array_push($errors, "File is already exist!!!");
+        return 3 ;
+    }
+
+    $count = count($errors);
+
+    if($count == 0){
+      $uplod =  move_uploaded_file($file_tmp,$path.$file_name);
+      if($uplod){
+      echo $file_name;
+    }else{
+      echo 'failed';
+    }
+  }
+
+
+  }
+
+
+ public function PrepareUploadedFile($FieldName, $MaxSize, $FileTypes='jpg|jpeg|gif|png', $NoRename=false, $dir=""){
+    
+    $f = $FieldName;
+   
+    /* get php.ini upload_max_filesize in bytes */
+    $php_upload_size_limit = trim(ini_get('upload_max_filesize'));
+    
+    $last = strtolower($php_upload_size_limit[strlen($php_upload_size_limit)-1]);
+   
+    /* switch($last){
+      case 'g':
+        $php_upload_size_limit *= 1024;
+      case 'm':
+        $php_upload_size_limit *= 1024;
+      case 'k':
+        $php_upload_size_limit *= 1024;
+    } */
+
+    $MaxSize = min($MaxSize, $php_upload_size_limit);
+    
+    
+        /* if($f['size']>$MaxSize || $f['error']){
+        echo str_replace('<MaxSize>', intval($MaxSize / 1024), 'file too large');
+        exit;
+      }   */
+      if(!preg_match('/\.('.$FileTypes.')$/i', $f['name'], $ft)){
+        echo str_replace('<FileTypes>', str_replace('|', ', ', $FileTypes), 'invalid file type');
+        exit;
+      }
+
+      if($NoRename){
+        $n  = str_replace(' ', '_', $f['name']);
+      }else{
+        $n  = microtime();
+        $n  = str_replace(' ', '_', $n);
+        $n  = str_replace('0.', '', $n);
+        $n .= $ft[0];
+      }
+
+      /* if(!file_exists($dir)){
+    $me  =  @mkdir($dir, 0777);
+        print_r($me);exit;
+      }
+ */
+
+
+     /*  if(!@move_uploaded_file($f['tmp_name'], $dir . $n)){
+        echo "Couldn't save the uploaded file. Try chmoding the upload folder '{$dir}' to 777.";
+        exit;
+      }else{
+        @chmod($dir.$n, 0666);
+        echo $n;
+      } */
+    
+
+      if( e/*! $result = \Cloudinary\Uploader::upload($f['tmp_name'],array("public_id" => $dir.$n)) */){
+      
+        echo "Couldn't save the uploaded file.";
+        exit;
+      }else{
+       
+        return $result;
+      }
+
+
+      print_r($result);exit;
+  }
+
+  public function replaceKey(&$array, $curkey, $newkey)
+  {
+       if(array_key_exists($curkey, $array))
+       {
+           $array[$newkey] = $array[$curkey];
+          /*  unset($array[$curkey]); */
+           return true;
+       }
+       return false;
+  
+  }
+
+  function getLoggedAdmin(){
+    // checks session variables to see whether the admin is logged or not
+    // if not, it returns FALSE
+    // if logged, it returns the user id
+
+    $adminConfig = config('adminConfig');
+
+    if($_SESSION['adminUsername']!=''){
+        return $_SESSION['adminUsername'];
+    }elseif($_SESSION['memberID']==$adminConfig['adminUsername']){
+        $_SESSION['adminUsername']=$_SESSION['memberID'];
+        return $_SESSION['adminUsername'];
+    }else{
+        return FALSE;
+    }
+}
+
+
+
+
+}
   
     
-}
+
 /**$instance = new HandleSql("localhost", "root","","classical_bank");
 $columns="email,password,phoneno";
 $instance -> insertQuery("user_table",$columns,"'patience@gmail.com','uuuuuuuuu','1223334'");

@@ -22,21 +22,35 @@
         if ( $type == "wallet:addresses:new-payment" ) {
             $address = $data['address'];
             $paid_amount = $additional_data['amount']['amount'];
-            
-            $mysqli = new mysqli("localhost", "root", "", "chris");
+    
+            $mysqli = new mysqli("localhost", "root", "", "tcb");
             if ($mysqli->connect_errno) {
                 exit();
             }
 
-            $query = "SELECT amount, id, amount_btc FROM transaction WHERE address = {$address}";
+            $query = "SELECT amount, email , deposite_id, amount_btc FROM deposits WHERE address = {$address}";
             $res = $mysqli->query($query);
             $row = $res->fetch_assoc();
             $amount = $row['amount'];
             $amount_btc = $row['amount_btc'];
+            $email = $row['email'];
             $ninety_percent = 0.95 * $amount;
-            $transaction_id = $row['id'];
+            $transaction_id = $row['deposite_id'];
             if ( $paid_amount > $ninety_percent ) {
-                $mysqli->query("UPDATE transaction SET status = 1 WHERE id = {$transaction_id}");
+                $mysqli->query("UPDATE deposits SET status = 1 WHERE address = {$address}");
+                if($mysqli){
+                    $qu= "SELECT parent_id, earn FROM refferal WHERE child_id = {$email}";
+                    $re = $mysqli->query($qu);
+                    $ro = $re->fetch_assoc();
+                    $parent = $ro['parent_id'];
+                    $referalAmount = 0.15 * $amount;
+                    $earn = $ro['earn'] +  $referalAmount;
+                    $getQuery =   $mysqli->query("SELECT mainaccountbal FROM users WHERE email = {$parent}");
+                    $rowres = $getQuery->fetch_assoc();
+                    $mainaccount = $rowres['mainaccoutbal'] + $referalAmount;
+                    $updateaccount =  $mysqli->query("UPDATE users SET mainaccountbal = {$mainaaccount} WHERE email = {$parent}");
+                    $refUpdate->$mysqli->query("UPDATE refferal SET earn = {$earn} WHERE email = {$email}");
+                }
             }
         }
     }

@@ -12,17 +12,12 @@ use Coinbase\Wallet\Client;
 use Coinbase\Wallet\Configuration;
 use Coinbase\Wallet\Resource\Address;
 
-
-    
-    
-
-
    
   $clas= new coin('localhost','root','','tcb');
 
 if($_POST){
     if($_POST['key'] == 'depo'){
-    //Post Data
+    //Post Data 
     $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : 2717171771;
     $amount = isset($_POST['amount']) ? $_POST['amount'] : 1000;
     $plan = $_POST['plan'];
@@ -67,15 +62,15 @@ if($_POST){
         echo $error;
         exit();
     }
-    if (!($stmt = $mysqli->prepare("INSERT INTO deposits(email,username,plan,amount, amount_btc,address,expected_roi,deposite_time,deposite_id,month,depositDate,status) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, '$date', 0)"))) {
+    if (!($stmt = $mysqli->prepare("INSERT INTO deposits(email,username,plan,pay_mode,amount, amount_btc,address,expected_roi,deposite_time,deposite_id,month,depositDate,status) VALUES (?,?,?,?, ?, ?, ?, ?, ?, ?, ?, '$date', 0)"))) {
         $error_array = array('error' => $stmt->error);
         $error = json_encode($error_array);
         echo $error;
         exit();
     }
-
+$bitcoin ='bitcoin';
     $amount_btc = $amount/$price;
-    if (!$stmt->bind_param("ssiddsdiid",$user_id,$username,$plan,$amount,$amount_btc,$btc_address,$expected_roi,$time,$deposite_id,$month)) {
+    if (!$stmt->bind_param("ssisddsdiid",$user_id,$username,$plan,$bitcoin,$amount,$amount_btc,$btc_address,$expected_roi,$time,$deposite_id,$month)) {
         $error_array = array('error' => $stmt->error);
         $error = json_encode($error_array);
         echo $error;

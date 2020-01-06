@@ -2,16 +2,14 @@
 use Firebase\JWT\JWT;
 use Mailgun\Mailgun;
 require('mysqllab.php');
+require('mail.php');
 require('jwt/JWT.php');
 require 'vendor/autoload.php';
  #endregion
 
 define('secret_key','otuonynoye');
 
-define('MAILGUN_KEY','284c135f4e519d546f64df153090b8d6-9b463597-571dfbf6');
-define('MAILGUN_PUBKEY', 'pubkey-5171366a26a4546b3530ac13e442ac6f');
 
-define('MAILGUN_DOMAIN', 'sandbox782b77014ac840b1b12f34e621802ae1.mailgun.org');
 
 
  #endregion
@@ -47,20 +45,17 @@ class coin extends HandleSql{
   //   USER REGISTRATION
 public function Register($input)
 {
-        $clean  = $this::clean($input);
-        //print_r($clean);exit;
-        $email = $clean[0];
-        $username = $clean[1];
-        $password = $clean[2];
-        $fullname = $clean[3];
-        $city = $clean[4];
-        $state = $clean[5];
-        $zip = $clean[6];
-        $country = $clean[7];
-        $address = $clean[8];
-        $squestion = $clean[9];
-        $sanswer = $clean[10];
-        $bitcoinaddress = $clean[11];
+        $clean  = $this::neat($input);
+        print_r($clean);exit;
+        $email = $clean['email'];
+        $username = $clean['username'];
+        $password = $clean['password'];
+        $fullname = $clean['fullname'];
+        $city = $clean['city'];
+        $state = $clean['state'];
+        $country = $clean['country'];
+        $address = $clean['address'];
+        $bitcoinaddress = $clean['bitcoinaddress'];
         $time = time();
         $rand = rand(1000,10000);
         $date = date('Y-m-d');
@@ -84,67 +79,30 @@ public function Register($input)
                 }else
 
                 {
-                    $insert = $this::insertQuery('users','username,email,password,fullname,zip,city,state,country,address,squestion,sanswer,bitcoinaddress,date_created,profileId,status',"'$fn','$e','$password','$fullname','$zip','$city','$state','$country','$address','$squestion','$sanswer','$bitcoinaddress','$date','$rand','1'") ; 
+                    $insert = $this::insertQuery('users','username,email,password,fullname,city,state,country,address,squestion,sanswer,bitcoinaddress,date_created,profileId,status',"'$fn','$e','$password','$fullname','$city','$state','$country','$address','$bitcoinaddress','$date','$rand','1'") ; 
                     if($insert)
                     {
+                        $hash = 68998983979;
                         
+                            /*  $link = "http://www.yourwebsite.com/verify.php?email='.$email.'&hash='.$hash.'"; */
+                            $link ="http://localhost:4200/#/verify/{$hash}";
 
-                        $mg = Mailgun::create(MAILGUN_KEY, 'https://api.mailgun.net');
+                            $message = "
 
-                       $me  =  $mg->messages()->send(MAILGUN_DOMAIN,[
-                           'from'  => 'support@tradepals.com',
-                           'to'    => $e,
-                           'subject' => 'please confirm your registration',
-                           'html'  =>  "
-                             <div style=background-color:#f6f6f6;width:100%!important;height:100%><div class=adM>
-                    
-                             </div><table class=m_-282877905690654672body-wrap style=background-color:#f6f6f6;width:100%>
-                                   <tbody><tr>
-                                         <td></td>
-                                         <td class=m_-282877905690654672container width=600 style=display:block!important;max-width:600px!important;margin:0 auto!important;clear:both!important>
-                                               <div class=m_-282877905690654672content style=max-width:600px;margin:0 auto;display:block;padding:20px>
-                                                     <table class=m_-282877905690654672main width=100% cellpadding=0 cellspacing=0>
-                                                           <tbody><tr>
-                                                                 <td style=color:#fff;background:#ff9f00;text-align:center;padding:20px;font-weight:500;border-radius:3px 3px 0 0>
-                                                                     Email Confirmation
-                                                                 </td>
-                                                           </tr>
-                                                           <tr>
-                                                                 <td class=m_-282877905690654672content-wrap style=padding:20px;background:#fff>
-                                                                       <table width=100% cellpadding=0 cellspacing=0>
-                                                                             <tbody><tr>
-                                                                                   <td class=m_-282877905690654672content-block style=padding:20px 0 20px 0px>
-                                                                                   Dear {$fullname}, 
+                            Thank you for signing up! 
+
+                            Your Account have been created, We may need to send you critical information about our service and it is important that we have an accurate email address. 
+
+                            Please click on the url below
+
+                            $link
+                            ";
+
                            
-                                                                                   You signed up to  Tradepals please cnfirm your email with link below
-                                                                                   </td>
-                                                                             </tr>
-                                                                             <tr>
-                                                                                   <td class=m_-282877905690654672content-block style=padding:0 0 20px>
-                                                                                         <a href=https://localhost:4200/{$username} class=m_-282877905690654672btn-primary style=background-color:#348eda;text-decoration:none;color:#fff;border:solid #348eda;border-width:10px 20px;line-height:2em;font-weight:bold;text-align:center;display:inline-block;border-radius:5px;text-transform:capitalize target=_blank >Visit <span class=il>Tradepals</span></a>
-                                                                                   </td>
-                                                                             </tr>
-                                                                             <tr>
-                                                                                   <td class=m_-282877905690654672content-block style=padding:0 0 20px>
-                                                                                         Thanks for choosing <span class=il>Tradepals</span>.
-                                                                                   </td>
-                                                                             </tr>
-                                                                       </tbody></table>
-                                                                 </td>
-                                                           </tr>
-                                                     </tbody></table>
-                                                     <div class=m_-282877905690654672footer>
-                                                         
-                                                     </div></div>
-                                         </td>
-                                         <td></td>
-                                   </tr>
-                             </tbody></table><div class=yj6qo></div><div class=adL>
-                             
-                             </div></div>
-                           "
-
-                         ]); #endregion
+                           
+                            $me = mail::passmail('noreply@smartvil.com','mezj972@gmail.com','Signup | Verification',$message,$link);
+                                            
+                                    
                         return array('code'=>'1', 'message'=>'account created','ref'=>'http://localhost:4200/'.$username);
                     }
                 }
@@ -225,8 +183,18 @@ public function Register($input)
            $this::countQuery('refferal',"where parent_id = '$decoded'");
            $fet = $this::fetchQuery();
            $refNum = $fet[0]['COUNT(*)'];
+
+           //get total earning 
+           $this::selectQuery('refferal','earn',"where parent_id = '$decoded'");
+           $r = $this::fetchQuery();
+           $sum = number_format(array_sum($r[0]));
+
+           // get username 
+           $this::selectQuery('users','username',"where email = '$decoded'");
+           $user = $this::fetchQuery();
+           $user = $user[0]['username'];
            
-           return array ('code'=>'1','refid'=>$referal_id,'refNum'=>$refNum);
+           return array ('code'=>'1','refid'=>$referal_id,'refNum'=>$refNum, 'refSum'=>$sum, 'username'=>$user);
 
      }    
   // USER LOGIN
@@ -251,7 +219,7 @@ public function Register($input)
                 $user_id = $e;
                 $token=$this->enc($issuer,$audience,$user_id);
                 $this::update('users',"last_login = '$time'",$where);
-              return array('code'=>1,'message'=>$token,'time'=>$time);
+              return array('code'=>1,'message'=>'Login succesfull','token'=>$token);
             }else 
             if($fetch[0]['email'] == $e && password_verify($password, $pass) == true && $fetch[0]['type'] == 'admin')
             {
@@ -259,14 +227,14 @@ public function Register($input)
                 $audience= "http://localhost:/admindash";
                 $user_id = $e;
                 $token=$this->enc($issuer,$audience,$user_id);
-              return array('code'=>2,'message'=>$token);
+              return array('code'=>2,'message'=>'Login succesful','token'=>$token);
             }else
             {
                 return array('code'=>3,'message'=>'invalid user');
             };
          }else
          {
-            return 'email does not exist';
+            return ['message'=>'email does not exist'];
         }
     }
 //GET ALL USER INFORMATION
@@ -280,7 +248,7 @@ public function getU($token)
         $decoded_array= (array) $call;
         $decoded=$decoded_array['id'];
 
-       $this->selectQuery("users","username,fullname,mainaccountbal,earning,bitcoinaddress,email,country,state,city,address,zip,date_created,last_login","WHERE email='$decoded'");
+       $this->selectQuery("users","username,fullname,mainaccountbal,earning,bitcoinaddress,email,country,state,city,address,date_created,last_login","WHERE email='$decoded'");
        if($this->checkrow()==1)
        {
         $boy=$this->fetchQuery();
@@ -335,6 +303,47 @@ public function getU($token)
        return array("code"=>"1","message"=>$boy,"pwith"=>$a,"totwith"=>$b,"lastwith"=>$lastwith,"totdep"=>$totdep,"lastdep"=>$lastdep);
     }
 }
+
+public function addAdmin($input){
+    $neat = $this::neat($input);
+    $email = $neat['email'];
+    $password = $neat['password'];
+    $time = time();
+        $rand = rand(1000,10000);
+        $date = date('Y-m-d');
+        $e = $this::ValidateEmail($email);
+        
+    $this::selectQuery('users','email',"where email ='$e'");
+    if($this::checkrow() > 0){
+        return ['code'=>2, 'message'=>'email already exists'];
+    }else{
+        $insert = $this::insertQuery('users','email,password,type,status',"'$e','$password','admin','1'") ; 
+                    if($insert)
+                    {             
+                        return array('code'=>'1', 'message'=>'account created');
+                    }
+    }
+}
+
+public function addBank($input){
+    $neat = $this::neat($input);
+    $bank = strtoupper($neat['bank']);
+    $account = $neat['account'];
+    $this::selectQuery('banks','Bank',"where Bank ='$bank'");
+    if($this::checkrow() > 0){
+      $up =   $this::update('banks',"Bank = '$bank', Account='$account'","where Bank = '$bank'");
+      if($up){
+          return ['code'=>1, 'message'=>'Bank updated'];
+      }
+    }else{
+        $up =   $this::insertQuery('banks',"Bank,Account","'$bank','$account'");
+      if($up){
+          return ['code'=>1, 'message'=>'Bank Uploaded'];
+      }
+    }
+}
+
+
 
 
 
@@ -409,43 +418,79 @@ public function process($input,$token)
             $this::update("depgraph","deposits='$jf'",$mon);
 
         return array('code'=>'1');
-              /*   $this::selectQuery('refferal','parent_id,child_id,num_com',"where child_id='$decoded'");
-                $refF = $this::fetchQuery();
-                $num_cum =$refF[0]['num_com'];
-                $parent_id =$refF[0]['parent_id'];
-                $num = $num_cum + 1;
-                $refam = $amount * 0.1;
-                
-                if($num_cum < 1)
-                {
-                    $this::selectQuery('users','mainaccountbal,earning',"where email ='$parent_id'");
-                    if($this::checkrow() == 1)
-                    {
-                        $nf= $this::fetchQuery();
-                        $main = $nf[0]['mainaccountbal'];
-                        $earn = $nf[0]['earning'];
-                        $earning =$earn + $refam;
-                        $mainaccount =$main + $refam;
-                    $inserted = $this::update('users',"mainaccountbal='$mainaccount',earning='$earning'","where email = '$parent_id'");
-                       if($inserted)
-                       {
-                        $this::selectQuery('refferal','parent_id,child_id,num_com',"where child_id='$decoded'");
-                         if($this::checkrow() == 1)
-                         {
-                            $this::update('refferal',"num_com='$num' ","where child_id ='$decoded'");
-                            return "complete";
-                         }
-                       }
-                    }
-
-                } */
-
             
         }
     } else 
     {
    return array('code'=>'2');
     }
+    }
+
+   public function processBank($input,$token){
+      $decoded = $this::getid($token);
+        $username = $input['username'];
+        $email = $decoded;
+        $time = time();
+        $plan = $input['plan'];
+        $amount = $input['amount'];
+        $expected_roi = $input['profit'];
+        $rand = rand(1000,10000);
+        $date = date("Y-m-d");
+        $month = date('m');  
+        $isactive = $this::checkUserDeposit($token);
+        if($isactive == true){
+         $in = $this::insertQuery('deposits','username,email,plan,pay_mode,amount,expected_roi,deposite_time,deposite_id,depositDate',"'$username','$email','$plan','bank','$amount','$expected_roi','$time','$rand','$date'");
+        if($in){
+            $mon = "WHERE month='$month'";
+            $this->selectQuery('depgraph',"deposits",$mon);
+            $added = $this::fetchQuery();
+            $mn=$added[0];
+            $jf= $mn['deposits'] + $amount;
+            $this::update("depgraph","deposits='$jf'",$mon);
+
+            $this::selectQuery("banks",'*','');
+            $f = $this::fetchQuery();
+
+        return array('code'=>'1', 'banks'=>$f, 'amount'=>$amount, 'payment'=>$rand);
+         };
+        } else{
+            return array('code'=>'2');
+        } 
+    }
+
+
+// FIXME:
+public function addReferalamount($token){
+        $this::selectQuery('refferal','parent_id,child_id,num_com',"where child_id='$decoded'");
+        $refF = $this::fetchQuery();
+        $num_cum =$refF[0]['num_com'];
+        $parent_id =$refF[0]['parent_id'];
+        $num = $num_cum + 1;
+        $refam = $amount * 0.1;
+        
+        if($num_cum < 1)
+        {
+            $this::selectQuery('users','mainaccountbal,earning',"where email ='$parent_id'");
+            if($this::checkrow() == 1)
+            {
+                $nf= $this::fetchQuery();
+                $main = $nf[0]['mainaccountbal'];
+                $earn = $nf[0]['earning'];
+                $earning =$earn + $refam;
+                $mainaccount =$main + $refam;
+            $inserted = $this::update('users',"mainaccountbal='$mainaccount',earning='$earning'","where email = '$parent_id'");
+               if($inserted)
+               {
+                $this::selectQuery('refferal','parent_id,child_id,num_com',"where child_id='$decoded'");
+                 if($this::checkrow() == 1)
+                 {
+                    $this::update('refferal',"num_com='$num' ","where child_id ='$decoded'");
+                    return "complete";
+                 }
+               }
+            }
+
+        } 
     }
 
     // ALL EARNING
@@ -456,25 +501,29 @@ public function process($input,$token)
         $decoded_array= (array) $call;
         $decoded=$decoded_array['id'];
 
-        $this::selectQuery('deposits','plan,amount,deposite_time,address,status',"WHERE email='$decoded' AND status='1'");
+        $this::selectQuery('deposits','plan,amount,deposite_time,deposite_id,address,pay_mode,status',"WHERE email='$decoded' AND status='1'");
 
         $f = $this::fetchQuery();
        
-        $plan =$f[0]['plan']; 
+        $plan =$f[0]['plan'];
+        
         
         $amount = $f[0]['amount'];
         $deposite_time = $f[0]['deposite_time'];
         $status = $f[0]['status'];
         $td = time();
         $address = $f[0]['address'];
+        $deposite_id = $f[0]['deposite_id'];
+        $pay_mode =$f[0]['pay_mode'];
         $final_time = 86400 * 28;
+       
         $famount ;
         $diffrence = $td - $deposite_time;
      if($status == 1){
 
        if($plan ==1)
        {
-        $famount =  $amount * 1.4;
+        $famount =  $amount * 1.8260;
          if($diffrence >= $final_time)
         {
             $diffrence = $final_time;
@@ -482,15 +531,24 @@ public function process($input,$token)
             $current = ($diffrence * $famount) / ($final_time);
             $am =  round($current,2);
 
-        
-            $this::selectQuery('users','mainaccountbal,earning',"where email ='$decoded'");
-             $accF = $this::fetchQuery();
-             $cash = $accF[0]['mainaccountbal'] + $am;
-             $cashE = $accF[0]['earning'] + $am;
+            $this::selectQuery('users','mainaccountbal,earning,currentearn',"where email ='$decoded'");
+            $accF = $this::fetchQuery();
+            $cash = $accF[0]['mainaccountbal']; 
+            $cashE = $accF[0]['earning'] + $am;
+            $curearn  = $accF[0]['currentearn'];
+            
+            $diffrenceEarn = round($am - $curearn,2);
+           
+            $cash = round($cash + $diffrenceEarn,2);
+
              $this::update('users',"mainaccountbal = '$cash',earning = '$cashE'","where email = '$decoded'");
              $am = 0;
-             $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$address'");
-                $pro = (($am/$famount)*100);
+             if($pay_mode == 'bitcoin'){
+                $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$address'");
+             }else{
+                $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$deposite_id'");
+             }
+             $pro = (($am/$famount)*100);
               return  array('code'=>1,'message'=>$am,'per'=>$pro);
         }else
         {
@@ -499,33 +557,116 @@ public function process($input,$token)
          $current = ($diffrence * $famount) / ($final_time);
          $am =  round($current,2);
          $cashPerSec = round(($famount/86400),5);
-        // print_r($am);exit;
-        $pro = (($am/$famount)*100);
+        $this::selectQuery('users','mainaccountbal,earning,currentearn',"where email ='$decoded'");
+        $fct = $this::fetchQuery();
+        $main = $fct[0]['mainaccountbal'];
+        $earncurr = $fct[0]['currentearn'];
+        $diffrenceEarn = round($am - $earncurr,2);
+        $main = round($main + $diffrenceEarn,2);
+        $tendays = strtotime('+10 day',$deposite_time);
+           if($deposite_time >= $tendays){
+            $this::update('users',"mainaccountbal = '$main', currentearn = '$am'","where email = '$decoded'");
+           }else{
+            $this::update('users',"currentearn = '$am'","where email = '$decoded'");
+           }
+       $pro = (($am/$famount)*100);
+
          return  array('code'=>1,'message'=>[$am,$cashPerSec],'per'=>$pro);
         }
         return  array('code'=>'1','message'=>$am);
         } 
 
-        if($plan ==2)
-        {
-            $famount =  $amount * 1.8;
-          if($diffrence >= $final_time)
-         {
+       
+        if($plan ==2){
+            $famount =  $amount * 2.106;
+          if($diffrence >= $final_time){
             $diffrence = $final_time;
 
             $current = ($diffrence * $famount) / ($final_time);
             $am =  round($current,2);
 
            
-            $this::selectQuery('users','mainaccountbal,earning',"where email ='$decoded'");
-             $accF = $this::fetchQuery();
-             $cash = $accF[0]['mainaccountbal'] + $am;
-             $cashE = $accF[0]['earning'] + $am;
-             $this::update('users',"mainaccountbal = '$cash',earning = '$cashE'","where email = '$decoded'");
-             $am = 0;
-             $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$address'");
+            $this::selectQuery('users','mainaccountbal,earning,currentearn',"where email ='$decoded'");
+            $accF = $this::fetchQuery();
+            $cash = $accF[0]['mainaccountbal']; 
+            $cashE = $accF[0]['earning'] + $am;
+            $curearn  = $accF[0]['currentearn'];
+            
+            $diffrenceEarn = round($am - $curearn,2);
+           
+            $cash = round($cash + $diffrenceEarn,2);
 
-              return  array('code'=>1,'message'=>$am);
+             $this::update('users',"mainaccountbal = '$cash',earning = '$cashE',currentearn =  '0'","where email = '$decoded'");
+             $am = 0;
+             if($pay_mode == 'bitcoin'){
+                $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$address'");
+             }else{
+                $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$deposite_id'");
+             }
+             $pro = (($am/$famount)*100);
+             return  array('code'=>1,'message'=>$am,'per'=>$pro);
+
+            
+
+           }else
+           {
+            $diffrence = $diffrence; 
+
+            $current = ($diffrence * $famount) / ($final_time);
+            $am =  round($current,2);
+            $cashPerSec = round(($famount/86400),5);
+           $this::selectQuery('users','mainaccountbal,earning,currentearn',"where email ='$decoded'");
+           $fct = $this::fetchQuery();
+           $main = $fct[0]['mainaccountbal'];
+           $earncurr = $fct[0]['currentearn'];
+           $diffrenceEarn = round($am - $earncurr,2);
+           $main = round($main + $diffrenceEarn,2);
+           $tendays = strtotime('+10 day',$deposite_time);
+           if($deposite_time >= $tendays){
+            $this::update('users',"mainaccountbal = '$main', currentearn = '$am'","where email = '$decoded'");
+           }else{
+            $this::update('users',"currentearn = '$am'","where email = '$decoded'");
+           }
+          $pro = (($am/$famount)*100);
+          return  array('code'=>1,'message'=>[$am,$cashPerSec],'per'=>$pro);
+   
+        
+           }
+
+          return  array('code'=>'1','message'=>$am);
+         } 
+
+    
+     if($plan == 3){
+            $famount =  $amount * 2.946;
+            
+          if($diffrence >= $final_time)
+         {
+            $diffrence = $final_time;
+              
+            $current = ($diffrence * $famount) / ($final_time);
+            $am =  round($current,2);
+           
+           
+            $this::selectQuery('users','mainaccountbal,earning,currentearn',"where email ='$decoded'");
+             $accF = $this::fetchQuery();
+             $cash = $accF[0]['mainaccountbal']; 
+             $cashE = $accF[0]['earning'] + $am;
+             $curearn  = $accF[0]['currentearn'];
+             
+             $diffrenceEarn = round($am - $curearn,2);
+            
+             $cash = round($cash + $diffrenceEarn,2);
+           
+             $this::update('users',"mainaccountbal = '$cash',earning = '$cashE',currentearn =  '0'","where email = '$decoded'");
+             $am = 0;
+             if($pay_mode == 'bitcoin'){
+                $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$address'");
+             }else{
+                $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$deposite_id'");
+             }
+             $pro = (($am/$famount)*100);
+             return  array('code'=>1,'message'=>$am,'per'=>$pro);  
          }else
          {
             $diffrence = $diffrence; 
@@ -533,49 +674,24 @@ public function process($input,$token)
             $current = ($diffrence * $famount) / ($final_time);
             $am =  round($current,2);
             $cashPerSec = round(($famount/86400),5);
-           // print_r($am);exit;
-   
-            return  array('code'=>1,'message'=>[$am,$cashPerSec]); 
-         }
-
-         return  array('code'=>'1','message'=>$am);
-         } 
-
-         if($plan == 3)
-        {
-            $famount =  $amount * 2;
-          if($diffrence >= $final_time)
-         {
-            $diffrence = $final_time;
-
-            $current = ($diffrence * $famount) / ($final_time);
-            $am =  round($current,2);
-
-           
-            $this::selectQuery('users','mainaccountbal,earning',"where email ='$decoded'");
-             $accF = $this::fetchQuery();
-             $cash = $accF[0]['mainaccountbal'] + $am;
-             $cashE = $accF[0]['earning'] + $am;
-             $this::update('users',"mainaccountbal = '$cash',earning = '$cashE'","where email = '$decoded'");
-             $am = 0;
-             $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and address = '$address'");
-
-              return  array('code'=>1,'message'=>$am);
-         }else
-         {
-            $diffrence = $diffrence; 
-
-            $current = ($diffrence * $famount) / ($final_time);
-            $am =  round($current,2);
-            $cashPerSec = round(($famount/86400),5);
-           // print_r($am);exit;
-   
-            return  array('code'=>1,'message'=>[$am,$cashPerSec]); 
+           $this::selectQuery('users','mainaccountbal,earning,currentearn',"where email ='$decoded'");
+           $fct = $this::fetchQuery();
+           $main = $fct[0]['mainaccountbal'];
+           $earncurr = $fct[0]['currentearn'];
+           $diffrenceEarn = round($am - $earncurr,2);
+           $main = round($main + $diffrenceEarn,2);
+           $tendays = strtotime('+10 day',$deposite_time);
+           if($deposite_time >= $tendays){
+            $this::update('users',"mainaccountbal = '$main', currentearn = '$am'","where email = '$decoded'");
+           }else{
+            $this::update('users',"currentearn = '$am'","where email = '$decoded'");
+           }
+          $pro = (($am/$famount)*100);
+          return  array('code'=>1,'message'=>[$am,$cashPerSec],'per'=>$pro);
          }
          return  array('code'=>'1','message'=>$am);
          } 
-
-         if($plan == 4)
+        /*  if($plan == 4)
         {
             $famount =  $amount * 2.4;
           if($diffrence >= $final_time)
@@ -593,8 +709,10 @@ public function process($input,$token)
              $this::update('users',"mainaccountbal = '$cash',earning = '$cashE'","where email = '$decoded'");
              $am = 0;
              $in = $this::update('deposits',"status = '2'","WHERE email='$decoded' and  address= '$address'");
+             $pro = (($am/$famount)*100);
+             return  array('code'=>1,'message'=>$am,'per'=>$pro);
 
-              return  array('code'=>1,'message'=>$am);
+              
          }else
          {
             $diffrence = $diffrence; 
@@ -603,11 +721,11 @@ public function process($input,$token)
          $am =  round($current,2);
          $cashPerSec = round(($famount/86400),5);
         // print_r($am);exit;
-
-         return  array('code'=>1,'message'=>[$am,$cashPerSec]);
+        $pro = (($am/$famount)*100);
+        return  array('code'=>1,'message'=>[$am,$cashPerSec],'per'=>$pro);
          } 
          return  array('code'=>'1','message'=>$am);
-         } 
+         }  */
 
         }else
         {
@@ -619,49 +737,50 @@ public function process($input,$token)
     // WITHDRAW FUNCTION//
    public function withdraw($input,$token)
     {
-        
         $jwt= new JWT;
         $call=$jwt::decode($token,secret_key, array('HS256'));
         $decoded_array= (array) $call;
         $decoded=$decoded_array['id'];
-
-        $clean = $this::clean($input);
-        //print_r($clean);exit;
-        $withdrawamount =$clean[0];
-       
-        $td = date('Y-m-d');
-        $time = time();
-        $month =date('m');
-        $withdrawtime = date('h:i:s');
-        $rand = rand(1000,10000);
-        $withdrawid = $time.$rand;
-        
-        $mon = "WHERE month='$month'";
-
-        $this::selectQuery('users','email,username',"where email = '$decoded'");
-        $f = $this::fetchQuery();
-        $email = $f[0]['email'];
-        $username =$f[0]['username'];
-
-        $this::selectQuery('users','mainaccountbal',"where email= '$decoded'");
-        $r = $this::fetchQuery();
-        $accountbal = $r[0]['mainaccountbal'] - $withdrawamount;
-        $up = $this::update('users',"mainaccountbal='$accountbal'","where email = '$decoded'");
-
-       
-            $this->selectQuery('withgraph',"withdrawal",$mon);
-            $added = $this::fetchQuery();
-            $mn=$added[0];
-            $jf= $mn['withdrawal'] + $withdrawamount;
-            $this::update("withgraph","withdrawal='$jf'",$mon);
-
-       if($up)
-       {
-          $this::insertQuery('withdrawal','email,username,withdrawamount,withdrawId,withdrawtime,date,status',"'$email','$username','$withdrawamount','$withdrawid','$withdrawtime','$td','0'");
-          return array('code'=>'1','message'=>'withdraw pending');
-       }
-       
-
+        $this::selectQuery('withdrawal','status',"where status = '0'");
+        if($this::checkrow() > 0){
+            return ['code'=>2,'message'=>'You have a pending withdrawal'];
+        }else{
+            $clean = $this::clean($input);
+            //print_r($clean);exit;
+            $withdrawamount =$clean[0];
+           
+            $td = date('Y-m-d');
+            $time = time();
+            $month =date('m');
+            $withdrawtime = date('h:i:s');
+            $rand = rand(1000,10000);
+            $withdrawid = $time.$rand;
+            
+            $mon = "WHERE month='$month'";
+    
+            $this::selectQuery('users','email,username',"where email = '$decoded'");
+            $f = $this::fetchQuery();
+            $email = $f[0]['email'];
+            $username =$f[0]['username'];
+    
+            $this::selectQuery('users','mainaccountbal',"where email= '$decoded'");
+            $r = $this::fetchQuery();
+            $accountbal = $r[0]['mainaccountbal'] - $withdrawamount;
+            $up = $this::update('users',"mainaccountbal='$accountbal'","where email = '$decoded'");
+    
+           
+                $this->selectQuery('withgraph',"withdrawal",$mon);
+                $added = $this::fetchQuery();
+                $mn=$added[0];
+                $jf= $mn['withdrawal'] + $withdrawamount;
+                $this::update("withgraph","withdrawal='$jf'",$mon);
+    
+           if($up)
+           {
+              $this::insertQuery('withdrawal','email,username,withdrawamount,withdrawId,withdrawtime,date,status',"'$email','$username','$withdrawamount','$withdrawid','$withdrawtime','$td','0'");
+              return array('code'=>'1','message'=>'withdraw pending');
+           }
+        }
     }
 
     public function getid($token){
@@ -756,7 +875,7 @@ public function process($input,$token)
 
     public function withC()
     {
-        $this::selectQuery("withdrawal",'email,username,withdrawamount,withdrawId,withdrawtime,date,status',"where status='0'");
+        $this::selectQuery("withdrawal",'email,username,profileid,withdrawamount,withdrawId,withdrawtime,date,status',"where status='0'");
         $me = $this::fetchQuery();
         return array('code'=>'1','withdrawals'=>$me);
     }
@@ -788,9 +907,9 @@ public function process($input,$token)
       $space = implode("-", $fdate);
       $spac = implode("-", $tdate);
 
-     $this::between('email,plan,username,amount,withdrawDate','deposits',"where withdrawDate between '$space' AND '$spac' AND email='$decoded'");
+     $this::between('email,plan,username,amount,depositDate','deposits',"where depositDate between '$space' AND '$spac' AND email='$decoded'");
      $dep =  $this::fetchQuery();
-     $this::between('amount','deposits',"where withdrawDate between '$space' AND '$spac' AND email='$decoded'");
+     $this::between('amount','deposits',"where depositDate between '$space' AND '$spac' AND email='$decoded'");
      $met =  $this::fetchQuery();
 
      foreach($met as $met){
@@ -832,11 +951,12 @@ public function process($input,$token)
 
     }
 
-public function AinvestD()
+
+    public function AinvestD()
 {
-   $this::lastDsc('deposits','username,amount','','sn',10);
+   $this::lastDsc('deposits','username,amount','','sn',6);
    $d = $this::fetchQuery();
-   $this::lastDsc('withdrawal','username,withdrawamount','','sn',10);
+   $this::lastDsc('withdrawal','username,withdrawamount','','sn',6);
    $w = $this::fetchQuery();
    return array('code'=>1,'message'=>[$d,$w]);
 }
@@ -965,14 +1085,96 @@ public function simWith($input)
 public function block($id)
 {
     $this::update('users',"status = '2'","where profileId = '$id'");
-    return 'done';
+    return ['message'=>'Blocked'];
 }
 public function unblock($id)
 {
     $this::update('users',"status = '1'","where profileId = '$id'");
-    return 'done';
+    return ['message'=>'Unblocked'];
 }
 
+public function subscribe($input){
+   $neat = $this::neat($input);
+    $email = $neat['email'];
+    $name = $neat['name'];
+    $me = mail::subscribe($email,$name); 
+    if($me){
+        return ['code'=>1];
+    }
 }
 
+public function forgotPass($email){
+    if($this::ValidateEmail($email)){
+      $this::selectQuery('users',"email","where email = '$email'");
+      if($this::checkrow() == 1){
+        $f = $this::fetchQuery();
+        $reg_email = $f[0]['email'];
+      
+        $token = openssl_random_pseudo_bytes(32);
+        $token = bin2hex($token);
+  
+        $endTime = strtotime("+15 minutes");
+      $insert = $this::replace("access_tokens","email, token, date_expires","'$reg_email','$token','$endTime'");
+    if($insert){
+      $link ="http://localhost:4200/#/reset_pass/{$token}";
+      $message="This email is in response to a forgotten password reset request at SmartVille. If you did make this request,click the  link below to be able to access your account 
+       $link 
+      For security purposes, you have 15 minutes to do this. If you do not click this link within 15 minutes, you’ll need to request a password reset again.
+      If you have not forgotten your password, you can safely ignore this message and you will still be able to login with your existing password.
+      ";
+    
+      $me = mail::passmail('noreply@smartvil.com','mezj972@gmail.com','Signup | Verification',$message,$link);
+  
+      if($me = true){return array('code'=>1);}
+    }
+   }else{
+        return 'error';
+      }
+    }
+  }
+
+  public function tokenVerify($token){
+    $time = time();
+    $this::selectQuery('access_tokens',"email","where token = '$token' and date_expires > '$time'");
+    if($this::checkrow() === 1){
+      $f = $this::fetchQuery();
+      $reg_id = $f[0]['email'];
+  
+      $issuer="http://localhost:4200";
+      $audience= "http://localhost:/dashboard";
+      $user_id = [$f[0]['email']];
+  
+      $tok=$this->enc($issuer,$audience,$user_id);
+     
+   $this::delete("access_tokens","where token = '$token'");
+    return array('code'=>1,'message'=>$tok);
+    }else{
+      return array('code'=>2);
+    }
+  }
+
+  public function changePass($password,$token){
+    $neat =  $this::neat($password);
+    $id_no = $this::getid($token);
+  
+    $reg_email = $id_no[0];
+    $pass = $neat['password'];
+   $update =  $this::update("users","pass='$pass'","where email= '$reg_email'");
+   if($update){
+     return array('code'=>1);
+   }
+  }
+
+  public function ConWith($email){
+      $this::selectQuery('withdrawal','withdrawid',"where email = '$email' and status = '0'");
+      if($this::checkrow() == 1){
+       $f = $this::fetchQuery();
+       $withdrawid = $f[0]['withdrawid'];
+       $this::update('withdrawal',"status = '1'","where withdrawid = '$withdrawid'");
+       return ['message'=>'Withdrawal confirmed'];
+      }else{ 
+        return ['message'=>'No pending withdrawal'];
+      }
+  }
+}
 ?>
