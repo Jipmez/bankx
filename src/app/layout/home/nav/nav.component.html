@@ -1,0 +1,459 @@
+<div class="page-template-default page page-id-22020 page-parent" *ngIf="rout">
+  <header class="sc-nav header" *ngIf="en != ''">
+    <div class="sc-nav__wrapper">
+
+      <!-- Menubar -->
+      <nav class="sc-nav__nav sc-nav__container">
+        <!-- Logo  -->
+        <div class="sc-nav__logo" *ngIf="en == 'unified'">
+          <a href="?en=unified" class="sc-nav__logo-link" title="Standard Chartered">
+            <span class="visuallyhidden">Standard Chartered</span>
+          </a>
+          <a href="?en=unified" class="sc-nav__logo-drop only-desktop" title="Standard Chartered">
+            <span class="visuallyhidden">Standard Chartered</span>
+          </a>
+        </div>
+
+        <!-- Menu Section -->
+        <ul class="sc-nav__list">
+
+          <!-- Accounts & Deposits -->
+          <li class="sc-nav__item sc-nav__item--has-meganav">
+            <a href="?en=my-dream-account">
+              <button class="sc-nav__btn sc-nav__menu">Accounts &amp; Deposits</button>
+            </a>
+          </li>
+
+
+          <!-- Loans -->
+
+          <li class="sc-nav__item sc-nav__item--has-meganav">
+            <a href="?en=borrow">
+              <button class="sc-nav__btn sc-nav__menu">Borrow</button>
+            </a>
+
+          </li>
+
+          <!--Credit Cards -->
+
+          <li class="sc-nav__item sc-nav__item--has-meganav">
+            <a href="?en=visa-platinum">
+              <button class="sc-nav__btn sc-nav__menu">Cards</button>
+            </a>
+
+          </li>
+
+
+          <!-- Investments -->
+
+          <li class="sc-nav__item sc-nav__item--has-meganav">
+            <button class="sc-nav__btn sc-nav__menu">Invest</button>
+          </li>
+
+          <!-- Help-->
+
+
+        </ul>
+        <div class="sc-nav__login-open-btn">
+          <!-- Open an account Button -->
+          <!--         <div class="sc-nav__open-account">
+            <a class="sc-nav__btn sc-nav__account-btn" title="Open an account"
+              href="https://www.sc.com/ng/banking/sc-mobile/">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 30">
+                  <path fill="#00a546"
+                    d="M1 30c-.6 0-1-.4-1-1v-5.1c0-1.3 1.2-2.7 2.1-3.1l5.7-2.3c.5-.2.7-.4.8-.6.2-.5.8-.7 1.3-.5.5.2.7.8.5 1.3-.4 1-1.4 1.4-1.8 1.6l-.2.1-5.7 2.2c-.2.3-.7 1-.7 1.3V29c0 .5-.4 1-1 1zM23 30c-.6 0-1-.4-1-1v-5.1c0-.4-.4-1.1-.6-1.2l-5.8-2.3c-.5-.2-1.5-.6-2-1.6-.2-.5 0-1.1.5-1.3.5-.2 1.1 0 1.3.5 0 .1.2.2.9.5.1 0 .1.1.2.1l5.6 2.2c.9.3 1.8 1.8 1.8 3.1V29c.1.5-.3 1-.9 1zM13 16h-1.7c-2 0-4-2.2-4.6-5.1v-.1L6 5.7C6 2.5 8.5 0 11.6 0h1.5c2.9.2 5.2 2.7 5.2 5.6v.1l-.7 5C17 13.7 15 16 13 16zm-4.4-5.6c.5 2.2 1.9 3.5 2.7 3.5H13c.8 0 2.2-1.4 2.7-3.5l.6-4.8c0-1.9-1.5-3.4-3.4-3.6h-1.3C9.6 2 8 3.6 8 5.6l.6 4.8zm8.7-4.7z">
+                  </path>
+                </svg>
+              </span>
+              Open an account
+            </a>
+          </div> -->
+
+          <!-- Login Buttons -->
+          <div class="sc-nav__login">
+            <a title="Online Banking Login" class="sc-nav__btn sc-nav__login-btn" [routerLink]="['/login']"
+              [queryParams]="{ en: 'unifiedlogin'}">
+              <span class="sc-nav__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24.19 28.58">
+                  <g data-name="Layer 2">
+                    <g>
+                      <path
+                        d="M21.19 28.58H3a3 3 0 0 1-3-3V11.23a3 3 0 0 1 3-3h18.19a3 3 0 0 1 3 3v14.35a3 3 0 0 1-3 3zM3 10.23a1 1 0 0 0-1 1v14.35a1 1 0 0 0 1 1h18.19a1 1 0 0 0 1-1V11.23a1 1 0 0 0-1-1z"
+                        fill="#d4d4d4"></path>
+                      <path
+                        d="M19 9.43a1 1 0 0 1-1-1v-2.7A3.74 3.74 0 0 0 14.26 2H9.92a3.74 3.74 0 0 0-3.73 3.73v2.7a1 1 0 0 1-2 0v-2.7A5.74 5.74 0 0 1 9.92 0h4.34A5.74 5.74 0 0 1 20 5.73v2.7a1 1 0 0 1-1 1zM12.19 23.33a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v4a.5.5 0 0 1-.5.5z"
+                        fill="#d4d4d4"></path>
+                      <path
+                        d="M12.12 18.93a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm0-2.44a.47.47 0 1 0 .47.47.47.47 0 0 0-.47-.47z"
+                        fill="#d4d4d4" data-name="Ellipse 7"></path>
+                      <path
+                        d="M12.12 18.93a2 2 0 1 1 2-2 2 2 0 0 1-2 2zm0-2.44a.47.47 0 1 0 .47.47.47.47 0 0 0-.47-.47z"
+                        fill="#d4d4d4" data-name="Ellipse 7"></path>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              Login
+
+            </a>
+          </div>
+        </div>
+        <!-- Hamburger Menu: Visible only for mobile  -->
+        <button class="sc-nav__btn sc-nav__close-button">
+          <span class="visuallyhidden">Close button</span>
+        </button>
+        <button class="sc-nav__btn sc-nav__hamburger only-mobile" (click)="open()">
+          <svg width="26" height="21" viewBox="0 0 26 21" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M25.5 11H.5a.5.5 0 0 1 0-1h25a.5.5 0 0 1 0 1zm0-10H.5a.5.5 0 0 1 0-1h25a.5.5 0 0 1 0 1zM.5 20h25a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1z"
+              fill="#B9B9B9"></path>
+          </svg>
+          <span class="visuallyhidden">Menu</span>
+        </button>
+      </nav>
+    </div>
+
+
+  </header>
+
+  <router-outlet></router-outlet>
+
+
+  <footer *ngIf="en != ''" class="sc-footer" id="sc-lb-module-footer" data-post-status="publish-status"
+    data-post-status-label="Published">
+    <div class="sc-content-wrapper">
+
+      <div class="sc-footer__column only-desktop">
+        <ul class="sc-footer__list">
+          <li>
+            <a title="About Us" data-context="Footer left column links"> About Us </a>
+          </li>
+          <li>
+            <a title="Board of Directors" data-context="Footer left column links"> Board of Directors </a>
+          </li>
+          <li>
+            <a title="News &amp; Media" data-context="Footer left column links"> News &amp; Media
+            </a>
+          </li>
+          <li>
+            <a title="Protecting our clients and the financial system" data-context="Footer left column links">
+              Protecting our clients and the financial system </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sc-footer__column only-desktop">
+        <ul class="sc-footer__list">
+          <li>
+            <a title="Careers" data-context="Footer center column links"> Careers
+            </a>
+          </li>
+          <li>
+            <a title="Client Terms" data-context="Footer center column links"> Client Terms </a>
+          </li>
+          <li>
+            <a title="Our Global Website" data-context="Footer center column links"> Our
+              Global Website </a>
+          </li>
+          <li>
+            <a title="Worldwide Locations" data-context="Footer center column links"> Worldwide Locations </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sc-footer__column only-desktop ">
+        <ul class="sc-footer__list">
+          <li>
+            <a title="Fighting Fraud" data-context="Footer right column links" target="_blank"> Fighting
+              Fraud </a>
+          </li>
+          <li>
+            <a title="Important Information" data-context="Footer right column links" href="/ng/important-information/">
+              Important Information </a>
+          </li>
+          <li>
+            <a title="Security Tips" data-context="Footer right column links"> Security Tips </a>
+          </li>
+          <li>
+            <a title=" Terms and Conditions" data-context="Footer right column links" href="/ng/terms-conditions/">
+              Terms
+              and Conditions </a>
+          </li>
+          <li>
+            <a title="Website Privacy Statement" data-context="Footer right column links"> Website Privacy Statement
+            </a>
+          </li>
+          <li>
+            <a title="Data Privacy Statement" data-context="Footer right column links"> Data Privacy Statement </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sc-footer__column">
+        <!--   <div class="sc-footer__download-apps" data-ios-url="http://retail.sc.com/scmobile/ng/"
+          data-android-url="http://retail.sc.com/scmobile/ng/">
+          <div class="sc-footer__store-icon">
+            <a href="https://apps.apple.com/ng/app/sc-mobile-nigeria/id650746202" title="App Store"
+              aria-label="Download On The App Store" class="sc-footer__app-link" target="_blank" data-tab-number="3"
+              aria-haspopup="true">
+              <span class="sc-hidden">App Icon</span>
+              <div class="icon hover-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="119.664" height="40" viewBox="0 0 119.664 40" role="img"
+                  aria-label="Download on the App Store">
+                  <title>Download on the App Store</title>
+                  <path
+                    d="M110.135 0H9.535c-.367 0-.73 0-1.095.002-.306.002-.61.008-.919.013A13.215 13.215 0 005.517.19a6.665 6.665 0 00-1.9.627 6.438 6.438 0 00-1.62 1.18A6.258 6.258 0 00.82 3.617 6.601 6.601 0 00.195 5.52a12.993 12.993 0 00-.179 2.002c-.01.307-.01.615-.015.921V31.56c.005.31.006.61.015.921a12.992 12.992 0 00.18 2.002 6.588 6.588 0 00.624 1.905A6.208 6.208 0 001.998 38a6.274 6.274 0 001.618 1.179 6.7 6.7 0 001.901.63 13.455 13.455 0 002.004.177c.31.007.613.011.919.011.366.002.728.002 1.095.002h100.6c.36 0 .724 0 1.084-.002.304 0 .617-.004.922-.01a13.279 13.279 0 002-.178 6.804 6.804 0 001.908-.63A6.277 6.277 0 00117.666 38a6.395 6.395 0 001.182-1.614 6.604 6.604 0 00.619-1.905 13.506 13.506 0 00.185-2.002c.004-.31.004-.61.004-.921.008-.364.008-.725.008-1.094V9.536c0-.366 0-.73-.008-1.092 0-.306 0-.614-.004-.92a13.507 13.507 0 00-.185-2.003 6.618 6.618 0 00-.62-1.903 6.466 6.466 0 00-2.798-2.8 6.768 6.768 0 00-1.908-.627 13.044 13.044 0 00-2-.176c-.305-.005-.618-.011-.922-.013-.36-.002-.725-.002-1.084-.002z"
+                    fill="#a6a6a6"></path>
+                  <path
+                    d="M8.445 39.125c-.305 0-.602-.004-.904-.01a12.687 12.687 0 01-1.87-.164 5.884 5.884 0 01-1.656-.548 5.406 5.406 0 01-1.397-1.016 5.32 5.32 0 01-1.02-1.397 5.722 5.722 0 01-.544-1.657 12.414 12.414 0 01-.166-1.875c-.007-.21-.015-.913-.015-.913v-23.1s.009-.692.015-.895a12.37 12.37 0 01.165-1.872 5.755 5.755 0 01.544-1.662 5.373 5.373 0 011.015-1.398 5.565 5.565 0 011.402-1.023 5.823 5.823 0 011.653-.544A12.586 12.586 0 017.543.887l.902-.012h102.769l.913.013a12.385 12.385 0 011.858.162 5.938 5.938 0 011.671.548 5.594 5.594 0 012.415 2.42 5.763 5.763 0 01.535 1.649 12.995 12.995 0 01.174 1.887c.003.283.003.588.003.89.008.375.008.732.008 1.092v20.929c0 .363 0 .718-.008 1.075 0 .325 0 .623-.004.93a12.731 12.731 0 01-.17 1.853 5.739 5.739 0 01-.54 1.67 5.48 5.48 0 01-1.016 1.386 5.413 5.413 0 01-1.4 1.022 5.862 5.862 0 01-1.668.55 12.542 12.542 0 01-1.869.163c-.293.007-.6.011-.897.011l-1.084.002z">
+                  </path>
+                  <g data-name="<Group>" fill="#fff">
+                    <g data-name="<Group>">
+                      <path data-name="<Path>"
+                        d="M24.769 20.3a4.949 4.949 0 012.356-4.151 5.066 5.066 0 00-3.99-2.158c-1.68-.176-3.308 1.005-4.164 1.005-.872 0-2.19-.988-3.608-.958a5.315 5.315 0 00-4.473 2.728c-1.934 3.348-.491 8.269 1.361 10.976.927 1.325 2.01 2.805 3.428 2.753 1.387-.058 1.905-.885 3.58-.885 1.658 0 2.144.885 3.59.852 1.489-.025 2.426-1.332 3.32-2.67a10.962 10.962 0 001.52-3.092 4.782 4.782 0 01-2.92-4.4zm-2.732-8.09a4.872 4.872 0 001.115-3.49 4.957 4.957 0 00-3.208 1.66 4.636 4.636 0 00-1.144 3.36 4.1 4.1 0 003.237-1.53z">
+                      </path>
+                    </g>
+                    <path
+                      d="M42.302 27.14H37.57l-1.137 3.356h-2.005l4.484-12.418h2.083l4.483 12.418h-2.039zm-4.243-1.55h3.752l-1.85-5.446h-.051zm17.101.38c0 2.813-1.506 4.62-3.779 4.62a3.07 3.07 0 01-2.848-1.583h-.043v4.484h-1.86V21.442h1.8v1.506h.033a3.212 3.212 0 012.883-1.6c2.298 0 3.813 1.816 3.813 4.622zm-1.91 0c0-1.833-.948-3.038-2.393-3.038-1.42 0-2.375 1.23-2.375 3.038 0 1.824.955 3.046 2.375 3.046 1.445 0 2.393-1.197 2.393-3.046zm11.875 0c0 2.813-1.506 4.62-3.779 4.62a3.07 3.07 0 01-2.848-1.583h-.043v4.484h-1.859V21.442h1.799v1.506h.034a3.212 3.212 0 012.883-1.6c2.298 0 3.813 1.816 3.813 4.622zm-1.91 0c0-1.833-.948-3.038-2.393-3.038-1.42 0-2.375 1.23-2.375 3.038 0 1.824.955 3.046 2.375 3.046 1.445 0 2.392-1.197 2.392-3.046zm8.495 1.066c.138 1.232 1.334 2.04 2.97 2.04 1.566 0 2.693-.808 2.693-1.919 0-.964-.68-1.54-2.29-1.936l-1.609-.388c-2.28-.55-3.339-1.617-3.339-3.348 0-2.142 1.867-3.614 4.519-3.614 2.624 0 4.423 1.472 4.483 3.614h-1.876c-.112-1.239-1.136-1.987-2.634-1.987s-2.521.757-2.521 1.858c0 .878.654 1.395 2.255 1.79l1.368.336c2.548.603 3.606 1.626 3.606 3.443 0 2.323-1.85 3.778-4.793 3.778-2.754 0-4.614-1.42-4.734-3.667zM83.346 19.3v2.142h1.722v1.472h-1.722v4.991c0 .776.345 1.137 1.102 1.137a5.808 5.808 0 00.611-.043v1.463a5.104 5.104 0 01-1.032.086c-1.833 0-2.548-.689-2.548-2.445v-5.189h-1.316v-1.472h1.316V19.3zm2.719 6.67c0-2.849 1.678-4.639 4.294-4.639 2.625 0 4.295 1.79 4.295 4.639 0 2.856-1.661 4.638-4.295 4.638-2.633 0-4.294-1.782-4.294-4.638zm6.695 0c0-1.954-.895-3.108-2.401-3.108s-2.4 1.162-2.4 3.108c0 1.962.894 3.106 2.4 3.106s2.401-1.144 2.401-3.106zm3.426-4.528h1.773v1.541h.043a2.16 2.16 0 012.177-1.635 2.866 2.866 0 01.637.069v1.738a2.598 2.598 0 00-.835-.112 1.873 1.873 0 00-1.937 2.083v5.37h-1.858zm13.198 6.395c-.25 1.643-1.85 2.771-3.898 2.771-2.634 0-4.269-1.764-4.269-4.595 0-2.84 1.644-4.682 4.19-4.682 2.506 0 4.08 1.72 4.08 4.466v.637h-6.394v.112a2.358 2.358 0 002.436 2.564 2.048 2.048 0 002.09-1.273zm-6.282-2.702h4.526a2.177 2.177 0 00-2.22-2.298 2.292 2.292 0 00-2.306 2.298z">
+                    </path>
+                  </g>
+                  <path
+                    d="M37.826 8.731a2.64 2.64 0 012.808 2.965c0 1.906-1.03 3.002-2.808 3.002h-2.155V8.73zm-1.228 5.123h1.125a1.876 1.876 0 001.967-2.146 1.881 1.881 0 00-1.967-2.134h-1.125zm5.082-1.41a2.133 2.133 0 114.248 0 2.134 2.134 0 11-4.247 0zm3.334 0c0-.976-.439-1.547-1.208-1.547-.773 0-1.207.571-1.207 1.547 0 .984.434 1.55 1.207 1.55.77 0 1.208-.57 1.208-1.55zm6.559 2.254h-.922l-.93-3.317h-.07l-.927 3.317h-.913l-1.242-4.503h.902l.806 3.436h.067l.926-3.436h.852l.926 3.436h.07l.803-3.436h.889zm2.281-4.503h.855v.715h.066a1.348 1.348 0 011.344-.802 1.465 1.465 0 011.559 1.675v2.915h-.889v-2.692c0-.724-.314-1.084-.972-1.084a1.033 1.033 0 00-1.075 1.141v2.635h-.888zm5.24-1.758h.888v6.26h-.888zm2.124 4.007a2.133 2.133 0 114.247 0 2.134 2.134 0 11-4.247 0zm3.333 0c0-.976-.439-1.547-1.208-1.547-.773 0-1.207.571-1.207 1.547 0 .984.434 1.55 1.207 1.55.77 0 1.208-.57 1.208-1.55zm1.849.98c0-.81.604-1.278 1.676-1.344l1.22-.07v-.389c0-.475-.315-.744-.922-.744-.497 0-.84.182-.939.5h-.86c.09-.773.818-1.27 1.84-1.27 1.128 0 1.765.563 1.765 1.514v3.077h-.855v-.633h-.07a1.515 1.515 0 01-1.353.707 1.36 1.36 0 01-1.501-1.348zm2.895-.384v-.377l-1.1.07c-.62.042-.9.253-.9.65 0 .405.351.64.834.64a1.062 1.062 0 001.166-.983zm2.053-.596c0-1.423.732-2.324 1.87-2.324a1.484 1.484 0 011.38.79h.067V8.437h.888v6.26h-.851v-.71h-.07a1.563 1.563 0 01-1.415.785c-1.145 0-1.869-.901-1.869-2.328zm.918 0c0 .955.45 1.53 1.203 1.53.75 0 1.212-.583 1.212-1.526 0-.938-.468-1.53-1.212-1.53-.748 0-1.203.58-1.203 1.526zm6.964 0a2.133 2.133 0 114.247 0 2.134 2.134 0 11-4.247 0zm3.333 0c0-.976-.438-1.547-1.208-1.547-.772 0-1.207.571-1.207 1.547 0 .984.435 1.55 1.207 1.55.77 0 1.208-.57 1.208-1.55zm2.107-2.249h.855v.715h.066a1.348 1.348 0 011.344-.802 1.465 1.465 0 011.559 1.675v2.915h-.889v-2.692c0-.724-.314-1.084-.972-1.084a1.033 1.033 0 00-1.075 1.141v2.635h-.889zm8.845-1.121v1.141h.976v.749h-.976v2.315c0 .472.194.679.637.679a2.967 2.967 0 00.339-.021v.74a2.916 2.916 0 01-.484.046c-.988 0-1.381-.348-1.381-1.216v-2.543h-.715v-.749h.715V9.074zm2.19-.637h.88v2.481h.07a1.386 1.386 0 011.374-.806 1.483 1.483 0 011.55 1.679v2.907h-.889V12.01c0-.72-.335-1.084-.963-1.084a1.052 1.052 0 00-1.134 1.142v2.63h-.888zm9.056 5.045a1.828 1.828 0 01-1.95 1.303 2.045 2.045 0 01-2.081-2.325 2.077 2.077 0 012.076-2.352c1.253 0 2.009.856 2.009 2.27v.31h-3.18v.05a1.19 1.19 0 001.2 1.29 1.08 1.08 0 001.07-.546zm-3.126-1.451h2.275a1.086 1.086 0 00-1.109-1.167 1.152 1.152 0 00-1.166 1.167z"
+                    fill="#fff" data-name="<Group>"></path>
+                </svg> </div>
+            </a>
+          </div>
+          <div class="sc-footer__store-icon">
+            <a href="https://play.google.com/store/apps/details?id=com.sc.breezenigeria.banking&amp;hl=en"
+              title="Google Play" aria-label="Get It On Google Play" class="sc-footer__app-link" target="_blank"
+              data-tab-number="4" aria-haspopup="true">
+              <span class="sc-hidden">App Icon</span>
+              <div class="icon hover-icon">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="135" height="40"
+                  viewBox="0 0 135 40" xml:space="preserve" role="img" aria-label="Get it On GooglePlay">
+                  <title>Get it On GooglePlay</title>
+                  <path
+                    d="M130 40H5c-2.75 0-5-2.25-5-5V5c0-2.75 2.25-5 5-5h125c2.75 0 5 2.25 5 5v30c0 2.75-2.25 5-5 5z">
+                  </path>
+                  <path
+                    d="M130 .8a4.2 4.2 0 014.2 4.2v30a4.2 4.2 0 01-4.2 4.2H5A4.2 4.2 0 01.8 35V5A4.2 4.2 0 015 .8h125m0-.8H5C2.25 0 0 2.25 0 5v30c0 2.75 2.25 5 5 5h125c2.75 0 5-2.25 5-5V5c0-2.75-2.25-5-5-5z"
+                    fill="#a6a6a6"></path>
+                  <path
+                    d="M47.42 10.24c0 .84-.25 1.51-.75 2-.56.59-1.3.89-2.2.89-.87 0-1.6-.3-2.21-.9s-.91-1.35-.91-2.23c0-.89.3-1.63.91-2.23s1.34-.9 2.21-.9c.43 0 .84.08 1.23.25s.7.39.94.67l-.53.53c-.4-.47-.94-.71-1.64-.71-.63 0-1.18.22-1.64.67-.46.44-.69 1.02-.69 1.73s.23 1.29.69 1.73c.46.44 1.01.67 1.64.67.67 0 1.23-.22 1.68-.67.29-.29.46-.7.5-1.22h-2.18V9.8h2.91c.02.15.04.3.04.44zm4.61-2.5H49.3v1.9h2.46v.72H49.3v1.9h2.73V13h-3.5V7h3.5v.74zM55.28 13h-.77V7.74h-1.68V7h4.12v.74h-1.68l.01 5.26zm4.66 0V7h.77v6h-.77zm4.19 0h-.77V7.74h-1.68V7h4.12v.74h-1.68l.01 5.26zm9.48-.78c-.59.61-1.32.91-2.2.91s-1.61-.3-2.2-.91-.88-1.35-.88-2.22.29-1.62.88-2.22c.59-.61 1.32-.91 2.2-.91.87 0 1.6.3 2.2.91.59.61.89 1.35.89 2.22-.01.88-.3 1.62-.89 2.22zm-3.83-.5c.44.45.99.67 1.63.67s1.19-.22 1.63-.67c.44-.45.67-1.02.67-1.72s-.22-1.27-.67-1.72c-.44-.45-.99-.67-1.63-.67s-1.19.22-1.63.67c-.44.45-.67 1.02-.67 1.72s.23 1.27.67 1.72zm5.8 1.28V7h.94l2.92 4.67h.03l-.03-1.16V7h.77v6h-.8l-3.05-4.89h-.03l.03 1.16V13h-.78z"
+                    fill="#fff" stroke="#fff" stroke-width=".2" stroke-miterlimit="10"></path>
+                  <path
+                    d="M68.14 21.75c-2.35 0-4.27 1.79-4.27 4.25 0 2.45 1.92 4.25 4.27 4.25s4.27-1.8 4.27-4.25c0-2.46-1.92-4.25-4.27-4.25zm0 6.83c-1.29 0-2.4-1.06-2.4-2.58 0-1.53 1.11-2.58 2.4-2.58s2.4 1.05 2.4 2.58c0 1.52-1.12 2.58-2.4 2.58zm-9.32-6.83c-2.35 0-4.27 1.79-4.27 4.25 0 2.45 1.92 4.25 4.27 4.25s4.27-1.8 4.27-4.25c0-2.46-1.92-4.25-4.27-4.25zm0 6.83c-1.29 0-2.4-1.06-2.4-2.58 0-1.53 1.11-2.58 2.4-2.58s2.4 1.05 2.4 2.58c0 1.52-1.11 2.58-2.4 2.58zm-11.08-5.52v1.8h4.32c-.13 1.01-.47 1.76-.98 2.27-.63.63-1.61 1.32-3.33 1.32-2.66 0-4.74-2.14-4.74-4.8s2.08-4.8 4.74-4.8c1.43 0 2.48.56 3.25 1.29l1.27-1.27c-1.08-1.03-2.51-1.82-4.53-1.82-3.64 0-6.7 2.96-6.7 6.61 0 3.64 3.06 6.61 6.7 6.61 1.97 0 3.45-.64 4.61-1.85 1.19-1.19 1.56-2.87 1.56-4.22 0-.42-.03-.81-.1-1.13h-6.07v-.01zm45.31 1.4c-.35-.95-1.43-2.71-3.64-2.71-2.19 0-4.01 1.72-4.01 4.25 0 2.38 1.8 4.25 4.22 4.25 1.95 0 3.08-1.19 3.54-1.88l-1.45-.97c-.48.71-1.14 1.18-2.09 1.18s-1.63-.44-2.06-1.29l5.69-2.35-.2-.48zm-5.8 1.42c-.05-1.64 1.27-2.48 2.22-2.48.74 0 1.37.37 1.58.9l-3.8 1.58zM82.63 30h1.87V17.5h-1.87V30zm-3.06-7.3h-.07c-.42-.5-1.22-.95-2.24-.95-2.13 0-4.08 1.87-4.08 4.27 0 2.38 1.95 4.24 4.08 4.24 1.01 0 1.82-.45 2.24-.97h.06v.61c0 1.63-.87 2.5-2.27 2.5-1.14 0-1.85-.82-2.14-1.51l-1.63.68c.47 1.13 1.71 2.51 3.77 2.51 2.19 0 4.04-1.29 4.04-4.43v-7.64h-1.77l.01.69zm-2.15 5.88c-1.29 0-2.37-1.08-2.37-2.56 0-1.5 1.08-2.59 2.37-2.59 1.27 0 2.27 1.1 2.27 2.59.01 1.48-.99 2.56-2.27 2.56zm24.39-11.08h-4.47V30h1.87v-4.74h2.61c2.07 0 4.1-1.5 4.1-3.88s-2.05-3.88-4.11-3.88zm.04 6.02H99.2v-4.29h2.65c1.4 0 2.19 1.16 2.19 2.14s-.79 2.15-2.19 2.15zm11.54-1.79c-1.35 0-2.75.6-3.33 1.91l1.66.69c.35-.69 1.01-.92 1.7-.92.96 0 1.95.58 1.96 1.61v.13c-.34-.19-1.06-.48-1.95-.48-1.79 0-3.6.98-3.6 2.81 0 1.67 1.46 2.75 3.1 2.75 1.25 0 1.95-.56 2.38-1.22h.06v.97h1.8v-4.79c.01-2.22-1.65-3.46-3.78-3.46zm-.23 6.85c-.61 0-1.46-.31-1.46-1.06 0-.96 1.06-1.33 1.98-1.33.82 0 1.21.18 1.7.42a2.257 2.257 0 01-2.22 1.97zM123.74 22l-2.14 5.42h-.06L119.32 22h-2.01l3.33 7.58-1.9 4.21h1.95L125.82 22h-2.08zm-16.8 8h1.87V17.5h-1.87V30z"
+                    fill="#fff"></path>
+                  <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="21.802" y1="2074.429" x2="5.02"
+                    y2="2091.211" gradientTransform="translate(0 -2065.717)">
+                    <stop offset="0" stop-color="#00a0ff"></stop>
+                    <stop offset=".007" stop-color="#00a1ff"></stop>
+                    <stop offset=".26" stop-color="#00beff"></stop>
+                    <stop offset=".512" stop-color="#00d2ff"></stop>
+                    <stop offset=".76" stop-color="#00dfff"></stop>
+                    <stop offset="1" stop-color="#00e3ff"></stop>
+                  </linearGradient>
+                  <path
+                    d="M10.44 7.54c-.29.31-.46.79-.46 1.4v22.12c0 .62.17 1.1.46 1.4l.07.07L22.9 20.15v-.3L10.51 7.47l-.07.07z"
+                    fill="url(#a)"></path>
+                  <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="33.834" y1="2085.717" x2="9.637"
+                    y2="2085.717" gradientTransform="translate(0 -2065.717)">
+                    <stop offset="0" stop-color="#ffe000"></stop>
+                    <stop offset=".409" stop-color="#ffbd00"></stop>
+                    <stop offset=".775" stop-color="orange"></stop>
+                    <stop offset="1" stop-color="#ff9c00"></stop>
+                  </linearGradient>
+                  <path
+                    d="M27.03 24.28l-4.13-4.13v-.3l4.13-4.13.09.05 4.89 2.78c1.4.79 1.4 2.09 0 2.89l-4.89 2.78-.09.06z"
+                    fill="url(#b)"></path>
+                  <linearGradient id="c" gradientUnits="userSpaceOnUse" x1="24.826" y1="2088.011" x2="2.067"
+                    y2="2110.769" gradientTransform="translate(0 -2065.717)">
+                    <stop offset="0" stop-color="#ff3a44"></stop>
+                    <stop offset="1" stop-color="#c31162"></stop>
+                  </linearGradient>
+                  <path d="M27.12 24.22L22.9 20 10.44 32.46c.46.49 1.22.55 2.08.06l14.6-8.3" fill="url(#c)"></path>
+                  <linearGradient id="d" gradientUnits="userSpaceOnUse" x1="7.294" y1="2065.896" x2="17.457"
+                    y2="2076.058" gradientTransform="translate(0 -2065.717)">
+                    <stop offset="0" stop-color="#32a071"></stop>
+                    <stop offset=".069" stop-color="#2da771"></stop>
+                    <stop offset=".476" stop-color="#15cf74"></stop>
+                    <stop offset=".801" stop-color="#06e775"></stop>
+                    <stop offset="1" stop-color="#00f076"></stop>
+                  </linearGradient>
+                  <path d="M27.12 15.78l-14.61-8.3c-.86-.49-1.62-.43-2.08.06L22.9 20l4.22-4.22z" fill="url(#d)"></path>
+                  <path
+                    d="M27.03 24.13l-14.52 8.25c-.81.46-1.54.43-2 .01l-.07.07.07.07c.47.42 1.19.45 2-.01l14.61-8.3-.09-.09z"
+                    opacity=".2"></path>
+                  <path
+                    d="M10.44 32.32c-.29-.31-.46-.79-.46-1.4v.15c0 .62.17 1.1.46 1.4l.07-.07-.07-.08zM32.01 21.3l-4.99 2.83.09.09L32 21.44c.7-.4 1.05-.92 1.05-1.44-.05.47-.4.94-1.04 1.3z"
+                    opacity=".12"></path>
+                  <path
+                    d="M12.51 7.62l19.5 11.08c.63.36.99.82 1.05 1.3 0-.52-.35-1.05-1.05-1.44L12.51 7.48c-1.4-.79-2.54-.13-2.54 1.47v.15c0-1.61 1.15-2.27 2.54-1.48z"
+                    opacity=".25" fill="#fff"></path>
+                </svg> </div>
+            </a>
+          </div>
+        </div> -->
+
+        <div class="sc-footer__contact-data">
+          <ul class="sc-footer__segment">
+            <li>
+              <h3 class="sc-heading">PERSONAL BANKING CONTACTS </h3>
+              <p class="sc-footer__number-detail">Contact Centre Numbers</p>
+              <p class="sc-footer__number">
+                <a href="tel:+44127046114">
+                  +44 1 270 4611 - 4 </a>
+              </p>
+              <p class="sc-footer__number">
+                <a href="tel:+448001235000">
+                  +44 800 123 5000 (Toll Free) </a>
+              </p>
+            </li>
+            <li>
+              <h3 class="sc-heading">CORPORATE &amp; INSTITUTIONAL AND COMMERCIAL BANKING CLIENTS CONTACT </h3>
+              <p class="sc-footer__number-detail">Client Service Lines (Mon-Fri during business hours)</p>
+              <p class="sc-footer__number">
+                <a href="tel:+44123682204">
+                  +44 1 2368220 - 4 </a>
+              </p>
+              <p class="sc-footer__number">
+                <a href="tel:+4412368344">
+                  +44 1 2368344 </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="sc-accordion only-mobile">
+          <input class="sc-accordion__input" id="footer-quick-links" name="footer-quick-links-27762" type="checkbox"
+            tabindex="-1">
+          <label class="sc-accordion__label" for="footer-quick-links" tabindex="0" aria-expanded="false"
+            role="button">Quick Links</label>
+          <div class="sc-accordion__content">
+            <div class="sc-footer__mobile-list">
+              <ul>
+                <li>
+                  <a title="About Us" data-context="Footer mobile links" href="/ng/about-us/"> About Us </a>
+                </li>
+                <li>
+                  <a title="Board of Directors" data-context="Footer mobile links"
+                    href="/ng/about-us/board-of-directors/"> Board of Directors </a>
+                </li>
+                <li>
+                  <a title="News &amp; Media" data-context="Footer mobile links" href="/ng/news-media/"> News &amp;
+                    Media </a>
+                </li>
+                <li>
+                  <a title="Protecting our clients and the financial system" data-context="Footer mobile links"
+                    href="https://www.sc.com/protecting-our-clients/"> Protecting our clients and the financial system
+                  </a>
+                </li>
+                <li>
+                  <a title="Careers" data-context="Footer mobile links" href="https://www.sc.com/en/careers/"> Careers
+                  </a>
+                </li>
+                <li>
+                  <a title="Client Terms" data-context="Footer mobile links"
+                    href="https://av.sc.com/ng/content/docs/ng-client-terms.pdf"> Client Terms </a>
+                </li>
+                <li>
+                  <a title="Our Global Website" data-context="Footer mobile links" href="https://www.sc.com/en/"> Our
+                    Global Website </a>
+                </li>
+                <li>
+                  <a title="Worldwide Locations" data-context="Footer mobile links"
+                    href="https://www.sc.com/en/about-us/standard-chartered-worldwide/"> Worldwide Locations </a>
+                </li>
+                <li>
+                  <a title="Fighting Fraud" data-context="Footer mobile links"
+                    href="https://www.sc.com/en/about/fighting-financial-crime/#fighting-fraud"> Fighting Fraud </a>
+                </li>
+                <li>
+                  <a title="Important Information" data-context="Footer mobile links" href="/ng/important-information/">
+                    Important Information </a>
+                </li>
+                <li>
+                  <a title="Security Tips" data-context="Footer mobile links"
+                    href="https://www.sc.com/global/security-tips/"> Security Tips </a>
+                </li>
+                <li>
+                  <a title="Terms and Conditions" data-context="Footer mobile links" href="/ng/terms-conditions/"> Terms
+                    and Conditions </a>
+                </li>
+                <li>
+                  <a title="Website Privacy Statement" data-context="Footer mobile links"
+                    href="/ng/website-privacy-statement/"> Website Privacy Statement </a>
+                </li>
+                <li>
+                  <a title="Data Privacy Statement" data-context="Footer mobile links"
+                    href="/ng/data-privacy-statement/"> Data Privacy Statement </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-footer__footer">
+        <div class="sc-footer__site-info only-desktop" *ngIf="en == 'unified'">
+          <span class="sc-footer__company">© Standard Chartered</span>
+          <span class="sc-footer__sitemap">
+            <a title="Site map" data-context="Footer site map link"> Sitemap </a>
+          </span>
+        </div>
+        <!--   <ul class="sc-footer__social-links">
+          <li>
+            <a title="Facebook" data-context="Footer social media links"
+              href="https://www.facebook.com/StandardCharteredNG/" data-tab-number="5" aria-haspopup="true"><svg
+                width="11" height="20" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="Facebook">
+                <title>icon-facebook</title>
+                <path
+                  d="M10.013 10.398H6.924v9.111H3.103v-9.111H.993V7.397h2.11V4.37c0-1.514.804-3.88 3.826-3.88l3.388.011v3.693H7.426c-.322 0-.502.168-.502.89v2.314h3.409l-.32 3z"
+                  fill="#434343" stroke="none" stroke-width="1" fill-rule="evenodd"></path>
+              </svg> </a>
+          </li>
+          <li>
+            <a title="Twitter" data-context="Footer social media links" href="https://twitter.com/StanChart/"
+              data-tab-number="6" aria-haspopup="true"><svg width="23" height="19" viewBox="0 0 23 19" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Twitter">
+                <title>icon-twitter</title>
+                <path
+                  d="M15.677-.008c-2.514 0-4.553 2.362-4.553 4.994 0 .375.041.738.118 1.086-3.784-.199-6.96-2.324-9.206-5.208A4.912 4.912 0 001.42 3.26c0 1.654.804 3.113 2.025 3.968a4.386 4.386 0 01-2.062-.597v.061c0 2.309 1.569 4.235 3.652 4.673a4.37 4.37 0 01-2.056.081c.579 1.894 2.261 3.271 4.253 3.311a8.88 8.88 0 01-6.74 1.974c2.015 1.352 4.408 2.27 6.979 2.27 8.374 0 12.953-7.391 12.953-13.69 0-.207-.004-.412-.014-.616.89-.672 1.483-1.512 2.094-2.468a8.78 8.78 0 01-2.615.751A4.748 4.748 0 0021.891.34 8.84 8.84 0 0119 1.496a4.456 4.456 0 00-3.323-1.504"
+                  fill="#434343" fill-rule="evenodd"></path>
+              </svg> </a>
+          </li>
+          <li>
+            <a title="Linked In" data-context="Footer social media links"
+              href="https://www.linkedin.com/company/standardchartered/" data-tab-number="7" aria-haspopup="true"><svg
+                width="21" height="20" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img"
+                aria-label="linkedin">
+                <title>icon-linkedin</title>
+                <path
+                  d="M20.011 12.444V20h-3.953v-7.049c0-1.771-.794-2.98-2.393-2.98-1.22 0-2.307.814-2.627 1.603-.117.282-.146.673-.146 1.068V20H6.938s.06-11.735 0-12.972h4.107v1.664l-.029.042h.029v-.042c.587-.896 1.843-2.177 4.189-2.177 2.906-.001 4.777 1.882 4.777 5.929zM1.18 20h3.849V7.028H1.18V20zM3.094 0c1.501 0 2.719 1.042 2.719 2.328 0 1.286-1.217 2.328-2.719 2.328-1.502 0-2.719-1.042-2.719-2.328C.375 1.042 1.592 0 3.094 0z"
+                  fill="#434343" stroke="none" stroke-width="1" fill-rule="evenodd"></path>
+              </svg> </a>
+          </li>
+        </ul> -->
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </footer>
+
+</div>
+
+
+
+<div *ngIf="!rout || en == ''">
+  <div class="wrapper" id="content">
+    <div class="content">
+      <svg class="logo">
+        <use xlink:href="../assets/images/logo.svg#logo"></use>
+      </svg>
+      <h1 class="title">UNDER MAINTANACE</h1>
+      <!--  <p class="description">Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor
+        volutpat.</p> -->
+      <button class="red space button" id="modalButon">CONTACT</button>
+    </div>
+
+  </div>
+</div>

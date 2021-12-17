@@ -1,0 +1,87 @@
+<div class="element-wrapper">
+  <h6 class="element-header">Recent Transactions</h6>
+  <div class="element-box-tp">
+    <div class="table-responsive">
+      <table class="table table-padded">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th class="text-center">Category</th>
+            <th class="text-right">Amount</th>
+          </tr>
+
+
+        </thead>
+        <tbody *ngFor="let trans of tran">
+          <tr data-toggle="modal" [attr.data-target]="'#exampleModalLong'+ trans.sn">
+            <td class="nowrap" *ngIf="trans.type == 'credit'"><span
+                class="status-pill smaller green"></span><span>{{trans.status}}</span></td>
+            <td class="nowrap" *ngIf="trans.type == 'debit'"><span
+                class="status-pill smaller red"></span><span>{{trans.status}}</span></td>
+            <td><span>{{trans.date}}</span></td>
+            <td class="cell-with-media"><img alt="" src="img/company1.png"
+                style="height: 25px;"><span>{{trans.description}}</span></td>
+            <td class="text-center" *ngIf="trans.type == 'credit'"><a class="badge badge-success"
+                href="#">{{trans.type}}</a></td>
+            <td class="text-center" *ngIf="trans.type == 'debit'"><a class="badge badge-danger"
+                href="#">{{trans.type}}</a></td>
+            <td class="text-right bolder nowrap" *ngIf="trans.type == 'credit'"><span class="text-success">+
+                {{trans.amount | currency}}</span></td>
+            <td class="text-right bolder nowrap" *ngIf="trans.type == 'debit'"><span class="text-danger">-
+                {{trans.amount | currency}}</span></td>
+          </tr>
+          <div class="modal fade" [id]="'exampleModalLong' + trans.sn" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true" style="height: 93% !important;">
+            <div class="modal-dialog modal-dialog-centered transaction-details modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row no-gutters">
+                    <div class="col-sm-5 d-flex justify-content-center bg-primary rounded-left py-4">
+                      <div class="my-auto text-center">
+                        <div class="text-17 text-white my-3"><i class="fas fa-building"></i></div>
+                        <h3 class="text-4 text-white font-weight-400 my-3">{{trans.description}}</h3>
+                        <div class="text-8 font-weight-500 text-white my-4">${{trans.amount}}</div>
+                        <p class="text-white">{{trans.date}}</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-7">
+                      <h5 class="text-5 font-weight-400 m-3">Transaction Details
+                        <button type="button" class="close font-weight-400" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span> </button>
+                      </h5>
+                      <hr>
+                      <div class="px-3">
+                        <ul class="list-unstyled">
+                          <li class="mb-2">Payment Amount <span class="float-right text-3">${{trans.amount}}</span></li>
+                          <li class="mb-2">Fee <span class="float-right text-3">-$4.80</span></li>
+                        </ul>
+                        <hr class="mb-2">
+                        <p class="d-flex align-items-center font-weight-500 mb-4">Total Amount <span
+                            class="text-3 ml-auto">${{trans.amount - 4.80}}</span></p>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Description:</li>
+                          <li class="text-muted">{{trans.description}}</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Transaction ID:</li>
+                          <li class="text-muted">{{trans.trx_token}}</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Status:</li>
+                          <li class="text-muted">{{trans.status}}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,239 @@
+<div class="content-i container-fluid">
+  <div class="content-box">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="user-profile compact">
+          <div class="up-head-w" [style.background-image]="'url(' + imageUrl + ')'">
+            <div class="up-social"><a href="#"><i class="os-icon os-icon-twitter"></i></a><a href="#"><i
+                  class="os-icon os-icon-facebook"></i></a></div>
+            <div class="up-main-info">
+              <h2 class="up-header">{{username}}</h2>
+              <h6 class="up-sub-header">{{email}}</h6>
+            </div><svg class="decor" width="842px" height="219px" viewBox="0 0 842 219"
+              preserveAspectRatio="xMaxYMax meet" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g transform="translate(-381.000000, -362.000000)" fill="#FFFFFF">
+                <path class="decor-path"
+                  d="M1223,362 L1223,581 L381,581 C868.912802,575.666667 1149.57947,502.666667 1223,362 Z"></path>
+              </g>
+            </svg>
+          </div>
+          <div class="up-controls">
+            <div class="row">
+              <div class="col-sm-6 col-6">
+                <div class="value-pair">
+                  <div class="label">Change picture</div>
+                  <input type="file" class="form-control" id="mediaFile" #mediaFile
+                    (change)="handlePic($event.target.files)" required>
+                  <button type="submit" class="btn btn-primary" (click)="sub()">Add picture</button>
+                </div>
+              </div>
+              <div class="col-sm-6 col-6">
+                <div class="value-pair">
+                  <div class="label">Status:</div>
+                  <div class="value badge badge-pill badge-success">Online</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="up-contents">
+            <div class="m-b">
+              <div class="row m-b">
+                <div class="col-sm-12 b-b ">
+                  <div class="el-tablo centered padded-v">
+                    <div class="value">${{accountbal}}</div>
+                    <div class="label">Balance</div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 b-b ">
+                  <div class="el-tablo centered padded-v">
+                    <button class="w-100 btn btn-danger" (click)="restrict(1)" *ngIf="restrain == 0">Restrict
+                      Transaction</button>
+                    <button class="w-100 btn btn-success" (click)="restrict(0)" *ngIf="restrain == 1">Grant
+                      Transaction</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="element-wrapper">
+          <div class="element-box">
+
+            <div class="element-info">
+              <div class="element-info-with-icon">
+                <div class="element-info-icon">
+                  <div class="os-icon os-icon-wallet-loaded"></div>
+                </div>
+                <div class="element-info-text">
+                  <h5 class="element-inner-header">Profile Settings</h5>
+                </div>
+              </div>
+            </div>
+            <form id="formValidate" (ngSubmit)="person(so)" #so="ngForm">
+              <fieldset class="form-group">
+                <legend><span>Personal update</span></legend>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group"><label for="">First name</label><input class="form-control" ngModel
+                        name="fullname" data-error="Please input your First Name" placeholder="First Name"
+                        required="required">
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group"><label for="">Last name</label><input class="form-control" ngModel
+                        name="email" data-error="Please input your Last Name" placeholder="Last Name"
+                        required="required">
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Phone</label><input class="form-control" ngModel name="phone"
+                        data-error="Please input your Last Name" placeholder="phone" required="required">
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-buttons-w"><button class="btn btn-primary disabled" type="submit"> Submit</button>
+                </div>
+              </fieldset>
+            </form>
+            <form id="formValidate" (ngSubmit)="Ctrx(co)" #co="ngForm">
+              <fieldset class="form-group">
+                <legend><span>Credit Transactions</span></legend>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Amount</label><input class="form-control" ngModel
+                        name="amount" data-error="Please input your First Name" placeholder="Amount"
+                        required="required">
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Status</label>
+                      <select ngModel required name="status" id="" class="form-control">
+                        <option value="">--select--</option>
+                        <option value="COMPLETE">COMPLETE</option>
+                        <option value="FAILED">FAILED</option>
+                      </select>
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Date</label>
+                      <input type="date" name="date" class="form-control" id="" ngModel required>
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Description</label>
+                      <textarea name="" id="" cols="10" rows="3" required="required" class="form-control" ngModel
+                        name="description">
+                      </textarea>
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-buttons-w"><button class="btn btn-primary disabled" type="submit"
+                    [disabled]="!co.valid"> Submit</button>
+                </div>
+              </fieldset>
+            </form>
+            <form id="formValidate" (ngSubmit)="Dtrx(do)" #do="ngForm">
+              <fieldset class="form-group">
+                <legend><span>Debit transactions</span></legend>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Amount</label><input class="form-control" ngModel
+                        name="amount" placeholder="Amount" required="required">
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Status</label>
+                      <select ngModel name="status" id="" class="form-control">
+                        <option value="">--Status--</option>
+                        <option value="COMPLETE">COMPLETE</option>
+                        <option value="FAILED">FAILED</option>
+                      </select>
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Date</label>
+                      <input type="date" name="date" class="form-control" id="" ngModel required>
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-group"><label for="">Description</label>
+                      <textarea name="" id="" cols="10" rows="3" required="required" class="form-control" ngModel
+                        name="description">
+                      </textarea>
+                      <div class="help-block form-text with-errors form-control-feedback"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-buttons-w"><button class="btn btn-primary disabled" type="submit"
+                    [disabled]="!do.valid"> Submit</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="element-wrapper">
+          <h6 class="element-header">Transactions</h6>
+          <div class="element-box-tp">
+            <div class="table-responsive">
+              <table class="table table-padded">
+                <thead>
+                  <tr>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th class="text-center">Category</th>
+                    <th class="text-right">Amount</th>
+                    <th class="text-right">Delete</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let trans of dep" id="{{trans.trx_token}}">
+                  <tr>
+                    <td class="nowrap" *ngIf="trans.type == 'credit'"><span
+                        class="status-pill smaller green"></span><span>{{trans.status}}</span></td>
+                    <td class="nowrap" *ngIf="trans.type == 'debit'"><span
+                        class="status-pill smaller red"></span><span>{{trans.status}}</span></td>
+                    <td><span>{{trans.date}}</span><span class="smaller lighter">1:52am</span></td>
+                    <td class="cell-with-media"><img alt="" src="img/company1.png"
+                        style="height: 25px;"><span>{{trans.description}}</span></td>
+                    <td class="text-center" *ngIf="trans.type == 'credit'"><a class="badge badge-success"
+                        href="#">{{trans.type}}</a></td>
+                    <td class="text-center" *ngIf="trans.type == 'debit'"><a class="badge badge-danger"
+                        href="#">{{trans.type}}</a></td>
+                    <td class="text-right bolder nowrap" *ngIf="trans.type == 'credit'"><span class="text-success">+
+                        {{trans.amount}} USD</span></td>
+                    <td class="text-right bolder nowrap" *ngIf="trans.type == 'debit'"><span class="text-danger">-
+                        {{trans.amount}} USD</span></td>
+                    <td class="text-right bolder nowrap"><span class="text-danger"><button
+                          (click)="delete(trans.trx_token)" class="btn btn-danger">Delete</button>
+                      </span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <div class="content-main">
+    <div class="padding">
+      <div class="box table-responsive">
+        <div class="box-header">
+          <div class="row">
+            <h3>All USER</h3><br><br><small style="display: inline-block;">Click each user to view</small>
+          </div>
+        </div>
+        <table #dataTble class="display table-striped">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Email</th>
+              <th>Account number</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let deposits of dep" (click)="select(deposits)">
+              <td>{{deposits.fname}}</td>
+              <td>{{deposits.email}}</td>
+              <td>{{deposits.accountN}}</td>
+              <td>${{deposits.balance}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Firstname</th>
+              <th>Email</th>
+              <th>Account number</th>
+              <th>Balance</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="box shadow">
+      <div class="box-header with-border">
+        <h3 class="box-title">Add User</h3>
+      </div>
+      <div class="box-body">
+        <form action="" (ngSubmit)="adUser(so)" #so='ngForm'>
+          <!-- Color Picker -->
+          <div class="form-group">
+            <label>Email:</label>
+            <input type="text" ngModel name="email" required class="form-control my-colorpicker1 colorpicker-element">
+          </div>
+          <!-- /.form group -->
+          <!-- Color Picker -->
+          <div class="form-group">
+            <label>First name:</label>
+            <input type="text" ngModel name="fname" required class="form-control my-colorpicker1 colorpicker-element">
+          </div>
+          <!-- /.form group -->
+          <!-- Color Picker -->
+          <div class="form-group">
+            <label>Last name</label>
+            <input type="text" ngModel name="lname" required class="form-control my-colorpicker1 colorpicker-element">
+          </div>
+          <!-- /.form group -->
+          <!-- Color Picker -->
+          <div class="form-group">
+            <label>Password</label>
+
+            <div class="input-group my-colorpicker2 colorpicker-element">
+              <input type="password" ngModel name="password" required class="form-control">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-key"></i>
+                </div>
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+
+          <!-- time Picker -->
+          <div class="form-group">
+            <div class="input-group my-colorpicker2 colorpicker-element">
+              <input type="submit" class="form-control btn btn-info" [disabled]='!so.valid'>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- /.box-body -->
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+</div>

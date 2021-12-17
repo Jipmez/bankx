@@ -1,0 +1,307 @@
+<div class="element-wrapper">
+  <h6 class="element-header">Virtual cards</h6>
+  <div>
+    <div class="bg-light shadow-sm rounded p-4 mb-4 mt-10">
+      <h3 class="text-5 font-weight-400 mb-4">Credit or Debit Cards <span class="text-muted text-4">(for
+          payments)</span>
+      </h3>
+      <div class="row">
+        <div class="col-12 col-sm-3 col-lg-3" *ngFor="let card of cards" [id]="'close' + card.cardN">
+          <div class="account-card account-card-primary text-white rounded p-3 mb-4 mb-lg-0">
+            <p class="text-4">{{card.cardN}}</p>
+            <p class="d-flex align-items-center"> <span
+                class="account-card-expire text-uppercase d-inline-block opacity-6 mr-2">Valid<br>
+                thru<br>
+              </span> <span class="text-4 opacity-9">{{card.expiry_date}}</span> <span
+                class="bg-light text-0 text-body font-weight-500 rounded-pill d-inline-block px-2 line-height-4 opacity-8 ml-auto">Primary</span>
+            </p>
+            <p class="d-flex align-items-center m-0"> <span
+                class="text-uppercase font-weight-500">{{card.card_name}}</span>
+              <img class="ml-auto" src="http://demo.harnishdesign.net/html/payyed/images/payment/visa.png" alt="visa"
+                title="" *ngIf="card.card_type == 'visa'"> <img class="ml-auto"
+                src="http://demo.harnishdesign.net/html/payyed/images/payment/mastercard.png" alt="mastercard" title=""
+                *ngIf="card.card_type == 'master'"> </p>
+            <div class="account-card-overlay rounded"> <a href="#"
+                [attr.data-target]="'#edit-card-details'+ card.card_id" data-toggle="modal"
+                class="text-light btn-link mx-2"><span class="mr-1"><i class="fas fa-edit"></i></span>Edit</a> <a
+                (click)="delete(card.cardN)" class="text-light btn-link mx-2"><span class="mr-1"><i
+                    class="fas fa-minus-circle"></i></span>Delete</a>
+            </div>
+          </div>
+
+          <!--Edit card details -->
+          <div class="modal fade" [id]="'edit-card-details'+ card.card_id" tabindex="-1" role="dialog"
+            aria-labelledby="edit-card-details" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title font-weight-400">Update Card</h5>
+                  <button type="button" class="close font-weight-400" [id]="'close' + card.card_id" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true">×</span> </button>
+                </div>
+                <div class="modal-body p-4">
+                  <form id="updateCard" method="post" (ngSubmit)="editC(ed,card.card_id)" #ed="ngForm">
+                    <div class="form-group">
+                      <label for="edircardNumber">Card Number</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend"> <span class="input-group-text"><img class="ml-auto"
+                              src="http://demo.harnishdesign.net/html/payyed/images/payment/visa.png" alt="visa"
+                              title=""></span> </div>
+                        <input type="text" class="form-control" data-bv-field="edircardNumber" id="edircardNumber"
+                          disabled="" value="{{card.cardN}}" placeholder="Card Number">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="editexpiryDate">Expiry Date</label>
+                          <input id="editexpiryDate" type="text" class="form-control" data-bv-field="editexpiryDate"
+                            ngModel name="expiry" placeholder="{{card.expiry_date}}">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label for="editcvvNumber">CVV <span class="text-info ml-1" data-toggle="tooltip"
+                              data-original-title="For Visa/Mastercard, the three-digit CVV number is printed on the signature panel on the back of the card immediately after the card's account number. For American Express, the four-digit CVV number is printed on the front of the card above the card account number."><i
+                                class="fas fa-question-circle"></i></span></label>
+                          <input id="editcvvNumber" type="password" class="form-control" data-bv-field="editcvvNumber"
+                            ngModel name="cvv" placeholder="{{card.cvv}} (3 digits)">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="editcardHolderName">Card Holder Name</label>
+                      <input type="text" class="form-control" data-bv-field="editcardHolderName" ngModel name="cardname"
+                        id="editcardHolderName" placeholder="{{card.card_name}}">
+                    </div>
+                    <button class="btn btn-primary btn-block" type="submit" [disabled]="!ed.valid">Update
+                      Card</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Edit card details End -->
+        </div>
+
+        <!--Add new card -->
+        <div class="col-12 col-sm-3 col-lg-3"> <a href="" data-target="#add-new-card-details" data-toggle="modal"
+            class="account-card-new d-flex align-items-center rounded h-100 p-3 mb-4 mb-lg-0">
+            <p class="w-100 text-center line-height-4 m-0"> <span class="text-3"><i
+                  class="fas fa-plus-circle"></i></span>
+              <span class="d-block text-body text-3">Add New Card</span> </p>
+          </a> </div>
+        <!--Add new card End -->
+      </div>
+    </div>
+
+    <div class="bg-light shadow-sm rounded p-4 mb-4">
+      <h3 class="text-5 font-weight-400 mb-4">Bank Accounts <span class="text-muted text-4">(for
+          withdrawal)</span>
+      </h3>
+      <div class="row">
+        <div class="col-12 col-sm-4" *ngFor="let bank of bank" [id]="'close' + bank.bank_id">
+          <div class="account-card account-card-primary text-white rounded mb-4 mb-lg-0">
+            <div class="row no-gutters">
+              <div class="col-3 d-flex justify-content-center p-3">
+                <div class="my-auto text-center text-13"> <i class="fas fa-university"></i>
+                  <p
+                    class="bg-light text-0 text-body font-weight-500 rounded-pill d-inline-block px-2 line-height-4 opacity-8 mb-0">
+                    Primary</p>
+                </div>
+              </div>
+              <div class="col-9 border-left">
+                <div class="py-4 my-2 pl-4">
+                  <p class="text-4 font-weight-500 mb-1">{{bank.bank_name}} Bank</p>
+                  <p class="text-4 opacity-9 mb-1">{{bank.account_number}}</p>
+                  <p class="m-0">Approved <span class="text-3"><i class="fas fa-check-circle"></i></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="account-card-overlay rounded"> <a href="#"
+                [attr.data-target]="'#bank-account-details'+ bank.bank_id" data-toggle="modal"
+                class="text-light btn-link mx-2"><span class="mr-1"><i class="fas fa-share"></i></span>More
+                Details</a> <a (click)="deleteB(bank.bank_id)" class="text-light btn-link mx-2"><span class="mr-1"><i
+                    class="fas fa-minus-circle"></i></span>Delete</a> </div>
+          </div>
+          <div class="modal fade" [id]="'bank-account-details' + bank.bank_id" tabindex="-1" role="dialog"
+            aria-labelledby="bank-account-details" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row no-gutters">
+                    <div class="col-sm-5 d-flex justify-content-center bg-primary rounded-left py-4">
+                      <div class="my-auto text-center">
+                        <div class="text-17 text-white mb-3"><i class="fas fa-university"></i></div>
+                        <h3 class="text-6 text-white my-3">{{bank.bank_name}}</h3>
+                        <div class="text-4 text-white my-4">{{bank.account_number}} | US</div>
+                        <p class="badge badge-light text-0 font-weight-500 rounded-pill px-2 mb-0">Primary</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-7">
+                      <h5 class="text-5 font-weight-400 m-3">Bank Account Details
+                        <button type="button" class="close font-weight-400" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span> </button>
+                      </h5>
+                      <hr>
+                      <div class="px-3">
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Account Type:</li>
+                          <li class="text-muted">Personal</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Account Name:</li>
+                          <li class="text-muted">{{bank.account_name}}</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Account Number:</li>
+                          <li class="text-muted">{{bank.account_number}}</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Bank Country:</li>
+                          <li class="text-muted">{{bank.bnak_country}}</li>
+                        </ul>
+                        <ul class="list-unstyled">
+                          <li class="font-weight-500">Status:</li>
+                          <li class="text-muted">{{bank.status}} <span class="text-success text-3"><i
+                                class="fas fa-check-circle"></i></span></li>
+                        </ul>
+                        <p><a href="#" class="btn btn-sm btn-outline-danger btn-block shadow-none"><span class="mr-1"><i
+                                class="fas fa-minus-circle"></i></span>Delete Account</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 col-sm-4"> <a href="" data-target="#add-new-bank-account" data-toggle="modal"
+            class="account-card-new d-flex align-items-center rounded h-100 p-3 mb-4 mb-lg-0">
+            <p class="w-100 text-center line-height-4 m-0"> <span class="text-3"><i
+                  class="fas fa-plus-circle"></i></span> <span class="d-block text-body text-3">Add New Bank
+                Account</span> </p>
+          </a> </div>
+      </div>
+    </div>
+
+    <!-- Modal Add new card -->
+    <div class="modal fade" id="add-new-card-details" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-400">Add a Card</h5>
+            <button type="button" class="close font-weight-400" data-dismiss="modal" id="close" aria-label="Close">
+              <span aria-hidden="true">×</span> </button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="addCard" (ngSubmit)="Addcard(so)" #so='ngForm'>
+              <div class="btn-group d-flex btn-group-toggle mb-3" data-toggle="buttons">
+                <label class="btn btn-outline-secondary btn-sm shadow-none w-100 active">
+                  <input type="radio" name="options" id="option1" checked="">
+                  Debit </label>
+              </div>
+              <div class="form-group">
+                <label for="cardType">Card Type</label>
+                <select id="cardType" class="custom-select" required ngModel name="cardType">
+                  <option value="">Card Type</option>
+                  <option value="visa">Visa</option>
+                  <option value="master">MasterCard</option>
+                  <option value="American express">American Express</option>
+                  <option value="discover">Discover</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" data-bv-field="cardnumber" id="cardNumber" required ngModel
+                  name="cardnumber" value="" placeholder="Card Number">
+              </div>
+              <div class="form-row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input id="expiryDate" type="text" class="form-control" data-bv-field="expiryDate" required ngModel
+                      name="expiry" value="" placeholder="MM/YY">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label for="cvvNumber">CVV <span class="text-info ml-1" data-toggle="tooltip"
+                        data-original-title="For Visa/Mastercard, the three-digit CVV number is printed on the signature panel on the back of the card immediately after the card's account number. For American Express, the four-digit CVV number is printed on the front of the card above the card account number."><i
+                          class="fas fa-question-circle"></i></span></label>
+                    <input id="cvvNumber" type="password" class="form-control" data-bv-field="cvvnumber" required
+                      ngModel name="cvv" value="" placeholder="CVV (3 digits)">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cardHolderName">Card Holder Name</label>
+                <input type="text" class="form-control" data-bv-field="cardholdername" id="cardHolderName" required
+                  ngModel name="cardname" value="" placeholder="Card Holder Name">
+              </div>
+              <button class="btn btn-primary btn-block" type="submit" [disabled]="!so.valid">Add Card</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Modal Add new card End-->
+
+
+
+    <div class="modal fade" id="add-new-bank-account" tabindex="-1" role="dialog" aria-labelledby="add-new-bank-account"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-400">Add bank account</h5>
+            <button type="button" class="close font-weight-400" data-dismiss="modal" aria-label="Close" id="dls">
+              <span aria-hidden="true">×</span> </button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="addbankaccount" (ngSubmit)="addBank(ba)" #ba="ngForm">
+              <!-- <div class="mb-3">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="personal" name="bankAccountType" class="custom-control-input" checked="" required=""
+                    type="radio">
+                  <label class="custom-control-label" for="personal">Personal</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="business" name="bankAccountType" class="custom-control-input" required=""
+                    type="radio">
+                  <label class="custom-control-label" for="business">Business</label>
+                </div>
+              </div> -->
+              <div class="form-group">
+                <label for="accountName">Bank Name</label>
+                <input type="text" class="form-control" data-bv-field="accountName" id="accountName" required=""
+                  value="" placeholder="e.g. Barclays Bank" ngModel name="bankname" required>
+              </div>
+              <div class="form-group">
+                <label for="accountName">Account Name</label>
+                <input type="text" class="form-control" data-bv-field="accountName" id="accountName" required=""
+                  value="" placeholder="e.g. Smith Rhodes" ngModel name="accname" required>
+              </div>
+              <div class="form-group">
+                <label for="accountNumber">Account Number</label>
+                <input type="text" class="form-control" data-bv-field="accountNumber" id="accountNumber" required=""
+                  value="" placeholder="e.g. 12346678900001" ngModel name="accnumber" required>
+              </div>
+              <div class="form-check custom-control custom-checkbox mb-3">
+                <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
+                <label class="custom-control-label" for="remember-me" required>I confirm the bank account details
+                  above</label>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit" [disabled]="!ba.valid">Add Bank
+                Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

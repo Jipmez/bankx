@@ -1,0 +1,192 @@
+<div class="element-wrapper compact pt-4">
+  <div class="element-actions">
+
+    <a class="btn btn-primary btn-sm" routerLink="card"><i class="os-icon os-icon-ui-22"></i><span>Add
+        Account</span></a>
+
+    <a class="btn btn-success btn-sm" routerLink="send"><i class="os-icon os-icon-grid-10"></i><span>Make
+        Payment</span></a>
+
+  </div>
+  <h6 class="element-header" style="position: inherit;">Financial Overview</h6>
+  <div class="element-box-tp">
+    <div class="row">
+      <div class="col-lg-7 col-xxl-6">
+        <div class="element-balances">
+          <!--  <div class="balance ">
+            <div class="balance-title">Total Balance</div>
+            <div class="balance-value"><span *ngIf="balance">${{balance}}</span>
+              <span *ngIf="balance == 0 || balance == null">$0</span>
+            </div>
+            <div class="balance-link"><a class="btn btn-link btn-underlined" routerLink="transactions"><span>View
+                  Statement</span><i class="os-icon os-icon-arrow-right4"></i></a></div>
+          </div> -->
+          <div class="balance">
+            <div class="balance-title">Credit Available</div>
+            <div class="balance-value" *ngIf="credit">${{credit}}</div>
+            <div class="balance-value" *ngIf="credit == 0 || credit == null">$0</div>
+            <div class="balance-link"><a class="btn btn-link btn-underlined" routerLink="dash"><span>Request
+                  Increase</span><i class="os-icon os-icon-arrow-right4"></i></a></div>
+          </div>
+          <div class="balance">
+            <div class="balance-title">Total Balance</div>
+            <div class="balance-value text-success"><span *ngIf="balance">{{balance | currency}}</span>
+              <span *ngIf="balance == 0 || balance == null">$0</span></div>
+            <div class="balance-link"><a class="btn btn-link btn-underlined" routerLink="transactions"><span>View
+                  Statement</span><i class="os-icon os-icon-arrow-right4"></i></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-3 col-sm-6 box-col-3 des-xl-25 rate-sec">
+        <div class="card profile-greeting">
+          <div class="card-header">
+            <div class="header-top">
+              <div class="setting-list bg-primary position-unset">
+                <ul class="list-unstyled setting-option">
+                  <li>
+                    <div class="setting-white"><i class="fa fa-cog"></i></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body text-center p-t-0">
+            <h3 class="font-light">Welcome, {{user}}!!</h3>
+            <p> We are glad that you are visit this dashboard. we will be happy to
+              help you grow your business.</p>
+            <a routerLink="profile">
+              <button class="btn btn-light">Update</button>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 col-xxl-12">
+    <div class="element-wrapper">
+      <div class="element-box">
+        <form (ngSubmit)="trans(tr)" #tr="ngForm">
+          <h5 class="element-box-header">Send Money</h5>
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="form-group"><label class="lighter" for="">Select Amount</label>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0"><input class="form-control" placeholder="Enter Amount..."
+                    value="0" type="number" ngModel name="amount" required>
+                  <div class="input-group-append">
+                    <div class="input-group-text">USD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="form-group"><label class="lighter" for="">Transfer to</label><select ngModel name="bank"
+                  class="form-control" required>
+                  <option value="" selected disabled> --select bank-- </option>
+                  <option *ngFor="let accs of acc" value="{{accs.bank_id}}">{{accs.bank_name}}
+                    *{{accs.account_number}}
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-buttons-w text-right compact"><a class="btn btn-grey" routerLink="card"><i
+                class="os-icon os-icon-ui-22"></i><span>Add
+                Account</span></a>
+
+            <a routerLink="send" class=" btn btn-primary"> <button class="btn btn-primary"
+                type="button"><span>Transfer</span><i class="os-icon os-icon-grid-18"></i></button></a>
+
+
+            <button class="btn btn-primary" type="submit" style="display: none;"
+              [disabled]="!tr.valid"><span>Transfer</span><i class="os-icon os-icon-grid-18"></i></button></div>
+
+
+
+        </form>
+
+        <button data-dismiss="modal" data-toggle="modal" data-target="#pass-edit" id="pass"
+          style="display: none;"></button>
+
+        <div class="modal fade" tabindex="-1" id="pass-edit" style="padding-right: 0px !important;">
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+              <form (ngSubmit)="transtk(trk)" #trk="ngForm">
+                <div class="modal-body modal-body-md text-center">
+                  <div class="nk-modal">
+                    <h4 class="nk-modal-title">Confirm Your Transction</h4>
+                    <div class="nk-modal-text">
+                      <p>To confirm your transaction.Please enter the token sent to your email.</p>
+                    </div>
+                    <div class="nk-modal-form">
+                      <div class="form-group">
+                        <input class="form-control form-control-password-big text-center" name="token" ngModel
+                          type="password">
+                      </div>
+                    </div>
+                    <div class="nk-modal-action"><button class="btn btn-lg btn-mw btn-primary"
+                        [disabled]="!trk.valid">Submit</button>
+                      <br>
+                      <a href="#" class="link link-soft" data-dismiss="modal" id="close">Cancel and
+                        return</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="element-wrapper">
+  <h6 class="element-header">Recent Transactions</h6>
+  <div class="element-box-tp">
+    <div class="table-responsive">
+      <table class="table table-padded">
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th class="text-center">Category</th>
+            <th class="text-right">Amount</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let trans of tran">
+          <tr>
+            <!--   <td class="nowrap"><span class="status-pill smaller green"></span><span>{{trans.status}}</span></td>
+            <td><span>Today</span><span class="smaller lighter">1:52am</span></td>
+            <td class="cell-with-media"><img alt="" src="img/company1.png"
+                style="height: 25px;"><span>{{trans.description}}</span></td>
+            <td class="text-center"><a class="badge badge-success" href="#">{{trans.type}}</a></td>
+            <td class="text-right bolder nowrap"><span class="text-success">+ {{trans.amount}} USD</span></td>
+          </tr>
+-->
+          <tr>
+            <td class="nowrap" *ngIf="trans.type == 'credit'"><span
+                class="status-pill smaller green"></span><span>{{trans.status}}</span></td>
+            <td class="nowrap" *ngIf="trans.type == 'debit'"><span
+                class="status-pill smaller red"></span><span>{{trans.status}}</span></td>
+            <td><span>{{trans.date}}</span></td>
+            <td class="cell-with-media"><img alt="" src="img/company1.png"
+                style="height: 25px;"><span>{{trans.description}}</span></td>
+            <td class="text-center" *ngIf="trans.type == 'credit'"><a class="badge badge-success"
+                href="#">{{trans.type}}</a></td>
+            <td class="text-center" *ngIf="trans.type == 'debit'"><a class="badge badge-danger"
+                href="#">{{trans.type}}</a></td>
+            <td class="text-right bolder nowrap" *ngIf="trans.type == 'credit'"><span class="text-success">+
+                {{trans.amount}} USD</span></td>
+            <td class="text-right bolder nowrap" *ngIf="trans.type == 'debit'"><span class="text-danger">-
+                {{trans.amount}} USD</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

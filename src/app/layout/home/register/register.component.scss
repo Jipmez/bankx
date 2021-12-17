@@ -1,0 +1,200 @@
+@import "../../../../assets/css/bankdash.css";
+
+.body {
+  height: 100vh;
+  font-family: "Inter Medium", "Arial", sans-serif;
+  font-weight: 500;
+  background-image: linear-gradient(to right, #2c3a87, #0373ea);
+  margin: 0px;
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: auto;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.css-1fbfqlo {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  flex: 0 0 auto;
+  margin-bottom: auto;
+}
+
+@media (min-width: 768px) {
+  .css-ehlpx1 {
+    margin: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.css-ehlpx1 {
+  font-family: "SCProsperSans Medium", Arial, sans-serif;
+  color: white;
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.css-dphaw7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .css-fiqswc {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .css-dphaw7 {
+    width: 33.3333%;
+  }
+}
+
+@media (min-width: 768px) {
+  .css-dphaw7 {
+    width: 66.6667%;
+  }
+}
+
+@media (min-width: 640px) {
+  .css-dphaw7 {
+    width: 50%;
+  }
+}
+
+input[type="text"]::-ms-clear {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+#card-container {
+  width: 100%;
+  max-width: 496px;
+}
+#modal-container {
+  width: 100%;
+  max-width: 496px;
+}
+
+.css-wv8obl {
+  flex: 0 0 auto;
+  box-shadow: rgb(0 0 0 / 20%) 0px 16px 24px 0px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.css-1ktek3f {
+  font-family: "SCProsperSans Medium", Arial, sans-serif;
+  color: rgb(82, 83, 85);
+  letter-spacing: 0.34px;
+  font-weight: 100;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.css-dyx20u {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.css-cet0rr {
+  margin-bottom: 0.5rem;
+}
+
+.css-dyqz3h {
+  position: relative;
+  height: 3rem;
+}
+
+.css-a6rsak {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.625rem;
+  cursor: pointer;
+}
+
+.css-1fobf8d {
+  margin-bottom: 1.5rem;
+}
+
+.css-1i5ih0v.default {
+  border-radius: 1.5rem;
+  display: flex;
+  width: 100%;
+  padding: 0.875rem;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border: 1px solid rgb(4, 115, 234);
+  font-family: "Inter Semi Bold", Arial, sans-serif;
+  color: white;
+  background-color: rgb(4, 115, 234);
+}
+
+.css-aqjrov {
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  font-family: "Inter Regular", sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  padding-right: 0.75rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  padding-left: 2.75rem;
+  color: rgb(82, 83, 85);
+  border-radius: 0.25rem;
+}
+
+.css-12vedec {
+  padding-top: 20px;
+  padding-bottom: 4px;
+}
+
+.css-z3b2ha {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.css-1gjypm6 {
+  border-top: 1px solid rgb(212, 212, 212);
+  background: rgba(229, 229, 229, 0.5);
+  color: rgb(4, 115, 234);
+  width: 100%;
+  padding: 1.25rem;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}

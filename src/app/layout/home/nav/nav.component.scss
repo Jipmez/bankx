@@ -1,0 +1,469 @@
+@import "../../../../assets/css/scc.css";
+
+.no-scroll {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+}
+
+/* Theme Style
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“
+- Body
+- Content
+- Logo
+- Button
+- Social Media
+- Modal
+- Overlay
+- Particles
+- Form
+
+
+
+/* Body
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+.wrapper {
+  background: url("http://hashmet.com/mami-underconstruction-theme/assets/images/bg001.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Content
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 80px 0;
+  box-sizing: border-box;
+  transition: top 0.5s;
+  top: 0;
+}
+
+div.content {
+  position: relative;
+  width: 360px;
+  text-align: center;
+  display: inline-block;
+  z-index: 1;
+}
+
+.title {
+  font-size: 24px;
+  letter-spacing: 0.3em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  font-family: DINNextLTProMedium;
+}
+
+.description {
+  font-size: 14px;
+
+  font-family: DINNextLTProLight;
+  letter-spacing: 0.2em;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.dark .title,
+.dark .description {
+  color: #ffffff;
+}
+
+.light .title,
+.light .description {
+  color: #505050;
+}
+
+.space {
+  margin-top: 90px;
+}
+
+@media (min-width: 480px) {
+  content {
+    width: 480px;
+  }
+  .title {
+    font-size: 50px;
+    margin-top: 60px;
+    letter-spacing: 0.2em;
+  }
+  .description {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 140px 0 80px 0;
+  }
+  content {
+    width: 610px;
+  }
+  .title {
+    font-size: 50px;
+    margin-top: 70px;
+  }
+  .description {
+    margin-top: 70px;
+    font-size: 18px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Logo
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.logo {
+  width: 85px;
+  height: 80px;
+}
+
+.dark .logo use {
+  fill: #ffffff;
+}
+
+.light .logo use {
+  fill: #505050;
+}
+
+.dark .closeIcon use {
+  fill: #ffffff;
+}
+
+.light .closeIcon use {
+  fill: #505050;
+}
+
+/* Button
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.button {
+  background-color: #bbbbbb;
+  padding: 16px 42px 12px 42px;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  font-size: 14px;
+  font-family: DINNextLTProMedium;
+  display: inline-block;
+  text-decoration: none;
+  line-height: inherit;
+  height: inherit;
+}
+
+.button.red {
+  background-color: #ff3a26;
+  color: #ffffff;
+}
+
+.button.red:hover {
+  background-color: #ffffff;
+  color: #ff3a26;
+}
+
+.button.blue {
+  background-color: #26b0ff;
+  color: #ffffff;
+}
+
+.button.blue:hover {
+  background-color: #ffffff;
+  color: #26b0ff;
+}
+
+.button.orange {
+  background-color: #ffa800;
+  color: #ffffff;
+}
+
+.button.orange:hover {
+  background-color: #ffffff;
+  color: #ffa800;
+}
+
+.button.green {
+  background-color: #96b40a;
+  color: #ffffff;
+}
+
+.button.green:hover {
+  background-color: #ffffff;
+  color: #96b40a;
+}
+
+.button.rounded {
+  border-radius: 5px;
+}
+
+.button.full-rounded {
+  border-radius: 22px;
+}
+
+/* Social Media
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.social-media.home {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+}
+
+.social-media li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 30px;
+  line-height: 21px;
+  font-size: 14px;
+  vertical-align: middle;
+  font-family: DINNextLTProLight;
+}
+
+.dark .social-media li {
+  color: #8a95a2;
+}
+
+.light .social-media li {
+  color: #7a7877;
+}
+
+.social-media li:last-child {
+  margin-right: 0;
+}
+
+.social-media .icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+}
+
+.dark .social-media .icon use {
+  fill: #5c6572;
+}
+
+.light .social-media .icon use {
+  fill: #7a7877;
+}
+
+.dark .social-media .icon:hover use {
+  fill: #8a95a2;
+}
+
+.light .social-media .icon:hover use {
+  fill: #505050;
+}
+
+/* Modal
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.modal {
+  max-width: inherit;
+  background-color: rgba(32, 46, 60, 0.95);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+  vertical-align: top;
+  border-radius: 0;
+  padding: 39px 5%;
+  width: 100%;
+  position: fixed;
+  top: -100vh;
+  height: 100vh;
+  transition: top 0.5s, background 0.2s;
+  overflow-y: scroll;
+}
+
+.dark .modal {
+  background-color: rgba(32, 46, 60, 0.95);
+}
+
+.light .modal {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.modal.open {
+  top: 0;
+}
+
+.wrapper.modal-opened {
+  top: 250px;
+  transition: top 0.5s;
+}
+
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.modal-close .closeIcon {
+  width: 22px;
+  height: 22px;
+}
+.modal-content .title {
+  font-size: 24px;
+  text-align: center;
+  margin: 23px 0;
+}
+
+.modal-content .sub-title,
+.modal-content .content {
+  color: #646f7c;
+  font-size: 14px;
+  text-align: center;
+}
+
+.modal-content .content {
+  font-family: DINNextLTProLight;
+  width: 100%;
+  display: block;
+  margin-bottom: 26px;
+  letter-spacing: 0.2em;
+}
+
+.modal-content .sub-title {
+  margin-bottom: 0;
+}
+
+.modal-content .social-media {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.modal-content .social-media li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  resize: none;
+  width: 100%;
+}
+
+.dark .modal-content input,
+.dark .modal-content textarea {
+  background-color: #202e3c;
+  border: 1px solid #495562;
+  color: #6c7784;
+}
+
+.light .modal-content input,
+.light .modal-content textarea {
+  background-color: #ffffff;
+  border: 1px solid #6c7784;
+  color: #6c7784;
+}
+
+.modal-content textarea {
+  height: 168px;
+}
+
+.modal-content button {
+  border: 0;
+  width: 100%;
+}
+
+.dark .modal-content button {
+  background-color: #ffffff;
+  color: #202e3c;
+}
+
+.light .modal-content button {
+  background-color: #505050;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .modal-content .social-media,
+  .modal-content .title,
+  .modal-content .sub-title,
+  .modal-content .content {
+    text-align: left;
+  }
+  .modal {
+    top: -560px;
+    height: 560px;
+  }
+}
+
+/* Overlay
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 0;
+  transition: background 0.5s, z-index 0s 0.5s;
+}
+.overlay.on {
+  z-index: 1;
+  transition: background 0.5s, z-index 0s;
+}
+
+.dark .overlay.on {
+  background: rgba(32, 46, 60, 0.9);
+}
+
+.light .overlay.on {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Particles
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+#particles-js canvas {
+  position: fixed;
+}
+
+/* Form
+â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“â€“ */
+
+.form-success-description {
+  display: none;
+  font-family: DINNextLTProLight;
+  width: 100%;
+  margin: 0 auto;
+  color: #646f7c;
+  font-size: 14px;
+}
+
+span.error {
+  display: block;
+  color: #e73e3e;
+  font-size: 11px;
+  margin-top: -10px;
+}

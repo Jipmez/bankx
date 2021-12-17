@@ -1,0 +1,129 @@
+<div class="bg-white shadow-sm rounded p-3 pt-sm-5 pb-sm-5 px-sm-5 mb-4" *ngIf="send == 0">
+  <form id="form-send-money" (ngSubmit)="trans(tr)" #tr="ngForm">
+    <div class="form-group">
+      <label for="withdrawto">Send to</label>
+      <select id="withdrawto" class="custom-select" required ngModel name="bank">
+        <option value="" selected disabled> --select bank-- </option>
+        <option *ngFor="let accs of acc" value="{{accs.bank_name}} {{ accs.account_number}}">{{accs.bank_name}}
+          *{{accs.account_number}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="youSend">Amount</label>
+      <div class="input-group">
+        <div class="input-group-prepend"> <span class="input-group-text">$</span> </div>
+        <input type="number" class="form-control" ngModel [(ngModel)]="amount" name="amount" required placeholder="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="des">Description</label>
+      <textarea ngModel name="des" class="form-control" id="" cols="5" rows="2" required maxlength="100"></textarea>
+    </div>
+    <p class="text-muted mt-4">Transactions fees <span class="float-right d-flex align-items-center">
+        0.005%</span></p>
+    <hr>
+    <p class="text-3 font-weight-500" *ngIf="amount">Amount to Send <span
+        class="float-right">{{amount - (amount * 0.005)}} USD</span>
+    </p>
+    <button class="btn btn-primary btn-block" style="background-color: #24695c !important;"
+      [disabled]="!tr.valid">Confirm</button>
+  </form>
+</div>
+
+
+
+<div class="bg-white shadow-sm rounded p-3 pt-sm-5 pb-sm-5 px-sm-5 mb-4" *ngIf="send == 1">
+  <p class="lead text-center alert alert-info">You are sending ${{amount - (amount * 0.005)}}<br>
+    to<br>
+    <span class="font-weight-500">{{bank}}</span></p>
+  <p class="mb-2 mt-4">Amount to send <span class="text-3 float-right" *ngIf="amount">{{amount - (amount * 0.005)}}
+      USD</span></p>
+  <p class="text-muted">Transactions fees <span class="float-right d-flex align-items-center">0.5%</span></p>
+  <hr>
+  <p class="text-4 font-weight-500">Total<span class="float-right"
+      *ngIf="amount">{{amount - (amount * 0.005)}}USD</span>
+  </p>
+  <form id="form-withdraw-money-confirm" method="post">
+    <button class="btn btn-primary btn-block" (click)="open()">Send</button>
+  </form>
+
+
+
+  <button data-dismiss="modal" data-toggle="modal" data-target="#pass-edit" id="pass" style="display: none;"></button>
+
+  <div class="modal fade" tabindex="-1" id="pass-edit" style="padding-right: 0px !important;">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content">
+        <form (ngSubmit)="transtk(trk)" #trk="ngForm">
+          <div class="modal-body modal-body-md text-center">
+            <div class="nk-modal">
+              <h4 class="nk-modal-title">Confirm Your Transction</h4>
+              <div class="nk-modal-text">
+                <p>To confirm your transaction.Please enter the token sent to your email.</p>
+              </div>
+              <div class="nk-modal-form">
+                <div class="form-group">
+                  <input class="form-control form-control-password-big text-center" name="token" ngModel
+                    type="password">
+                </div>
+              </div>
+              <div class="nk-modal-action"><button class="btn btn-lg btn-mw btn-primary"
+                  [disabled]="!trk.valid">Submit</button>
+                <br>
+                <a href="#" class="link link-soft" data-dismiss="modal" id="close">Cancel and
+                  return</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bg-white text-center shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4" *ngIf="send == 2">
+  <div class="my-4">
+    <p class="text-success text-20 line-height-07"><i class="fas fa-check-circle"></i></p>
+    <p class="text-success text-8 font-weight-500 line-height-07">Success!</p>
+    <p class="lead">Transactions Complete</p>
+  </div>
+  <p class="text-3 mb-4">You've Succesfully sent <span
+      class="text-4 font-weight-500">{{amount - (amount * 0.005)}}USD</span> to <span
+      class="font-weight-500">{{bank}}</span>, See transaction details under <a class="btn-link" href="#">Activity</a>.
+  </p>
+  <button class="btn btn-primary btn-block" routerLink="transactions">Transactions</button>
+
+</div>
+
+
+
+<div class="bg-white text-center shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4" *ngIf="send == 3">
+  <div class="my-4">
+    <p class="text-danger text-20 line-height-07"><i class="fa fa-times-circle"></i></p>
+    <p class="text-danger text-8 font-weight-500 line-height-07">Account restricted!</p>
+    <p class="lead">Transaction Failed</p>
+  </div>
+  <p class="text-3 mb-4">Your Account has been temporary<span class="text-4 font-weight-500"> restricted,</span> to
+    proceed with the current transfer request <span class="font-weight-500">vist any of our branches to verify this
+      transaction</span>, See transaction details under .</p>
+  <button class="btn btn-danger btn-block" routerLink="dash">Transaction Failed</button>
+
+</div>
+
+
+<div class="bg-white text-center shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4" *ngIf="send == 4">
+  <div class="my-4">
+    <p class="text-warning text-20 line-height-07"><i class="fa fa-times-circle "></i></p>
+    <p class="text-danger text-8 font-weight-500 line-height-07">Transaction Terminated!</p>
+    <p class="lead">Transaction Failed</p>
+  </div>
+  <p class="text-3 mb-4">You have reached the maximum transfer<span class="text-4 font-weight-500"> allowed,</span> for
+    your account per day. <span class="font-weight-500">vist any of our branches to verify this
+      transaction</span>, See transaction details under .</p>
+  <button class="btn btn-danger btn-block" routerLink="dash">Transaction Failed</button>
+
+</div>

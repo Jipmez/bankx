@@ -1,0 +1,210 @@
+<div class="page-wrapper null compact-wrapper">
+  <div class="page-main-header">
+    <div class="main-header-right row m-0">
+      <div class="main-header-left">
+        <div class="logo-wrapper"><a href="index.html"><img class="img-fluid" style="height: 39px;"
+              src="https://av.sc.com/assets/global/images/components/header/standard-chartered-logo.svg" alt=""></a>
+        </div>
+        <div class="dark-logo-wrapper"><a href="index.html"><img class="img-fluid" [src]="imageUrl" alt=""></a></div>
+        <div class="toggle-sidebar" (click)="toggleme()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="feather feather-align-center status_toggle middle" id="sidebar-toggle"
+            checked="true">
+            <line x1="18" y1="10" x2="6" y2="10"></line>
+            <line x1="21" y1="6" x2="3" y2="6"></line>
+            <line x1="21" y1="14" x2="3" y2="14"></line>
+            <line x1="18" y1="18" x2="6" y2="18"></line>
+          </svg></div>
+      </div>
+
+      <div class="nav-right col pull-right right-menu p-0">
+        <ul class="nav-menus">
+          <li>
+            <div class="mode"><i class="fa fa-moon-o"></i></div>
+          </li>
+
+          <li class="onhover-dropdown p-0">
+            <button class="btn btn-primary-light" type="button"><a (click)="logOut()"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-log-out">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>Log out</a></button>
+          </li>
+        </ul>
+      </div>
+      <div class="d-lg-none mobile-toggle pull-right w-auto"><button _ngcontent-ack-c54="" type="button"
+          (click)="logOut()" class="btn btn-primary-light"><a _ngcontent-ack-c54=""><svg _ngcontent-ack-c54=""
+              xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-log-out">
+              <path _ngcontent-ack-c54="" d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline _ngcontent-ack-c54="" points="16 17 21 12 16 7"></polyline>
+              <line _ngcontent-ack-c54="" x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>Log out</a></button></div>
+    </div>
+  </div>
+
+  <div class="page-body-wrapper null">
+    <header class="main-nav " style="    z-index: 900;">
+      <div class="sidebar-user text-center"><a class="setting-primary" routerLink="profile"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-settings">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg></a><img class="img-90 rounded-circle" [src]="imageUrl" alt="" style="height: 90px;">
+        <div class="badge-bottom"><span class="badge badge-primary">Personal</span></div><a routerLink="profile">
+          <h6 class="mt-3 f-14 f-w-600" style="color: #24695c;">{{user}}</h6>
+        </a>
+
+      </div>
+      <nav>
+        <div class="main-navbar">
+          <div class="left-arrow disabled" id="left-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="feather feather-arrow-left">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg></div>
+          <div id="mainnav">
+            <ul class="nav-menu custom-scrollbar" style="display: block;">
+              <li class="back-btn">
+                <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
+                    aria-hidden="true"></i></div>
+              </li>
+
+              <li class=""><a class="nav-link menu-title" [class.active]="currentUrl == '/dash'" routerLink="/dash"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-home">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg><span>Wallet</span>
+                  <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                </a>
+              </li>
+              <li class=""><a class="nav-link menu-title " [class.active]="currentUrl == '/dash/transactions'"
+                  routerLink="transactions"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-airplay">
+                    <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                    <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                  </svg><span>Transactions</span>
+                  <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                </a>
+              </li>
+              <li class=""><a class="nav-link menu-title" [class.active]="currentUrl == '/dash/card'"
+                  routerLink="card"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-layers">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg><span>Cards</span>
+                  <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                </a>
+              </li>
+              <li class=""><a class="nav-link menu-title" [class.active]="currentUrl == '/dash/send'"
+                  routerLink="send"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-zap">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg><span>Send Money</span>
+                  <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                </a>
+              </li>
+              <li class=""><a class="nav-link menu-title" [class.active]="currentUrl == '/dash/profile'"
+                  routerLink="profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-user-check">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <polyline points="17 11 19 13 23 9"></polyline>
+                  </svg><span>Profile</span>
+                  <div class="according-menu"><i class="fa fa-angle-right"></i></div>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+    <div class="page-body">
+      <div class="container-fluid dashboard-default-sec">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+
+
+
+    <div _ngcontent-ilo-c3="" class="luno-mobile-nav  isMobile">
+      <!---->
+      <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+        <!---->
+        <!----><a _ngcontent-ilo-c3="" routerLink="transactions" class="ng-star-inserted">
+          <!---->
+          <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple=""
+            [class.active]="currentUrl == '/dash/transactions'">
+            <div _ngcontent-ilo-c3="" class="svg"
+              style="background: url(&quot;https://image.flaticon.com/icons/png/128/3029/3029373.png&quot;); background-size: 26px;">
+            </div>
+            <p _ngcontent-ilo-c3="">Transactions</p>
+          </div>
+          <!---->
+          <!---->
+        </a></div>
+
+      <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+        <!---->
+        <!----><a _ngcontent-ilo-c3="" routerLink="/dash" class="ng-star-inserted ">
+          <!---->
+          <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted active"
+            [class.active]="currentUrl == '/dash'  || currentUrl == '/dash'">
+            <div _ngcontent-ilo-c3="" class="svg"
+              style="background: url(&quot;https://image.flaticon.com/icons/png/128/1041/1041888.png&quot;); background-size: 24px;">
+            </div>
+            <p _ngcontent-ilo-c3="">Overview</p>
+          </div>
+          <!---->
+          <!---->
+        </a></div>
+      <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+        <!---->
+        <!----><a _ngcontent-ilo-c3="" routerLink="card" class="ng-star-inserted">
+          <!---->
+          <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple=""
+            [class.active]="currentUrl == '/card'  || currentUrl == '/dash/card'">
+            <div _ngcontent-ilo-c3="" class="svg"
+              style="background: url(&quot;https://image.flaticon.com/icons/png/128/747/747156.png&quot;); background-size: 26px;">
+            </div>
+            <p _ngcontent-ilo-c3="">Cards</p>
+          </div>
+          <!---->
+          <!---->
+        </a></div>
+      <div _ngcontent-ilo-c3="" class="luno-mobile-nav__item ng-star-inserted">
+        <!---->
+        <!----><a _ngcontent-ilo-c3="" routerLink="profile" class="ng-star-inserted">
+          <!---->
+          <div _ngcontent-ilo-c3="" class="mat-ripple ng-star-inserted" mat-ripple=""
+            [class.active]="currentUrl == '/profile'  || currentUrl == '/dash/profile'">
+            <div _ngcontent-ilo-c3="" class="svg"
+              style="background: url(&quot;https://image.flaticon.com/icons/png/128/3135/3135715.png&quot;); background-size: 26px;">
+            </div>
+            <p _ngcontent-ilo-c3="">Profile</p>
+          </div>
+          <!---->
+          <!---->
+        </a></div>
+    </div>
+  </div>
+</div>
