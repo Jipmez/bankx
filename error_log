@@ -1,0 +1,916 @@
+[27-Nov-2021 03:55:42 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 546
+[27-Nov-2021 12:39:08 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 543
+[27-Nov-2021 12:50:56 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 543
+[27-Nov-2021 12:52:57 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 543
+[27-Nov-2021 13:07:30 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 660
+[27-Nov-2021 13:09:48 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 660
+[27-Nov-2021 13:11:34 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 543
+[27-Nov-2021 13:16:21 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 660
+[27-Nov-2021 13:19:41 America/New_York] PHP Warning:  Illegal string offset 'code' in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 570
+[27-Nov-2021 13:28:23 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 543
+[27-Nov-2021 13:35:09 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1914): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[27-Nov-2021 13:35:09 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(612): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(360): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[27-Nov-2021 13:35:09 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1914): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[27-Nov-2021 13:35:35 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 543
+[27-Nov-2021 13:51:27 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 162
+[27-Nov-2021 13:54:24 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 162
+[27-Nov-2021 14:07:25 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 215
+[27-Nov-2021 14:18:35 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/stcbhsjm/public_html/bank/mysqllab.php on line 207
+[27-Nov-2021 14:19:54 America/New_York] PHP Warning:  Invalid argument supplied for foreach() in /home/stcbhsjm/public_html/bank/mysqllab.php on line 207
+[27-Nov-2021 14:25:12 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 554
+[27-Nov-2021 14:52:50 America/New_York] PHP Notice:  Undefined index: des in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 152
+[27-Nov-2021 14:52:50 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[27-Nov-2021 14:54:20 America/New_York] PHP Notice:  Undefined index: des in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 152
+[27-Nov-2021 14:54:20 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[27-Nov-2021 14:55:49 America/New_York] PHP Notice:  Undefined index: des in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 152
+[27-Nov-2021 14:55:49 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[27-Nov-2021 15:46:54 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[27-Nov-2021 15:50:13 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 671
+[27-Nov-2021 16:01:15 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 554
+[27-Nov-2021 16:20:59 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 554
+[27-Nov-2021 16:25:35 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[27-Nov-2021 23:41:39 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(623): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[27-Nov-2021 23:41:39 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1925): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[27-Nov-2021 23:41:39 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1925): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[28-Nov-2021 01:55:13 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 554
+[28-Nov-2021 04:02:58 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk/bank/uploads/10956600_1638090136_20433530226.jpg): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 589
+[28-Nov-2021 17:38:28 America/New_York] PHP Deprecated:  Non-static method mail::loginmail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 554
+[29-Nov-2021 06:46:34 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(623): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[29-Nov-2021 10:31:09 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[29-Nov-2021 10:31:26 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 179
+[29-Nov-2021 10:32:54 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[29-Nov-2021 10:33:15 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 179
+[29-Nov-2021 10:45:28 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[29-Nov-2021 10:46:01 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 180
+[29-Nov-2021 10:50:00 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[29-Nov-2021 10:50:06 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 180
+[29-Nov-2021 10:57:48 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[29-Nov-2021 10:58:38 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 179
+[29-Nov-2021 11:00:49 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 163
+[29-Nov-2021 11:00:54 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 179
+[29-Nov-2021 11:01:33 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 179
+[29-Nov-2021 11:13:25 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[29-Nov-2021 11:14:35 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[29-Nov-2021 11:15:05 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 176
+[29-Nov-2021 11:15:05 America/New_York] PHP Notice:  Undefined index: trx_id in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 177
+[29-Nov-2021 11:15:05 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 182
+[29-Nov-2021 11:16:19 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[29-Nov-2021 11:16:41 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 182
+[29-Nov-2021 11:19:25 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[29-Nov-2021 11:19:44 America/New_York] PHP Notice:  Undefined variable: print_r in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 178
+[29-Nov-2021 11:19:44 America/New_York] PHP Fatal error:  Uncaught Error: Function name must be a string in /home/stcbhsjm/public_html/bank/ApiFunct.php:178
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/baseApi.php(79): coin->trxk(Array)
+#1 {main}
+  thrown in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 178
+[29-Nov-2021 11:21:31 America/New_York] PHP Notice:  Undefined index: amount in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 183
+[30-Nov-2021 10:43:15 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 682
+[30-Nov-2021 10:45:14 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[30-Nov-2021 12:13:14 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk/bank/uploads/40720500_1638292217_20428834190.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 12:13:23 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk/bank/uploads/17511700_1638292394_20428834190.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 12:13:27 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk/bank/uploads/78210700_1638292403_20428834190.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 12:13:28 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk/bank/uploads/08065900_1638292407_20428834190.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 13:37:12 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 682
+[30-Nov-2021 14:37:28 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk/bank/uploads/99751900_1638301010_20487443350.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 14:55:22 America/New_York] PHP Warning:  unlink(uploads/http://stcbnk.com/bank/uploads/64051500_1637912256_20804453599.jpg): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 14:55:23 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk.com/bank/uploads/97185900_1638302122_20804453599.jpg): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 15:00:31 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[30-Nov-2021 17:31:50 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 682
+[30-Nov-2021 17:42:14 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[30-Nov-2021 18:16:19 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk.com/bank/uploads/61926100_1638301048_20487443350.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 18:16:21 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk.com/bank/uploads/48912700_1638314179_20487443350.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 595
+[30-Nov-2021 18:52:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(630): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[30-Nov-2021 18:52:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1936): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[30-Nov-2021 18:52:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1936): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[30-Nov-2021 18:56:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(630): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[30-Nov-2021 18:56:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1936): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[30-Nov-2021 18:56:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1936): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[01-Dec-2021 01:02:57 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1936): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[01-Dec-2021 01:02:57 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(630): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[01-Dec-2021 01:02:57 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1936): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[01-Dec-2021 03:32:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[01-Dec-2021 03:32:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[01-Dec-2021 03:32:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[03-Dec-2021 11:35:37 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[03-Dec-2021 11:35:37 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[05-Dec-2021 10:38:18 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[05-Dec-2021 10:59:11 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[05-Dec-2021 11:03:07 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[05-Dec-2021 11:15:42 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[05-Dec-2021 11:15:42 America/New_York] PHP Notice:  A non well formed numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[05-Dec-2021 11:16:24 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[05-Dec-2021 11:16:24 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[05-Dec-2021 11:16:24 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[05-Dec-2021 23:58:24 America/New_York] PHP Notice:  A non well formed numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 302
+[10-Dec-2021 03:04:21 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[10-Dec-2021 03:04:21 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[10-Dec-2021 07:27:14 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[11-Dec-2021 06:25:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[11-Dec-2021 06:25:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[11-Dec-2021 06:25:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[13-Dec-2021 16:21:50 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[13-Dec-2021 16:28:29 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[13-Dec-2021 17:47:49 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[13-Dec-2021 17:48:59 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[13-Dec-2021 23:23:54 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[13-Dec-2021 23:23:54 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[15-Dec-2021 13:26:43 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[15-Dec-2021 16:39:19 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[15-Dec-2021 17:23:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(139): coin->getid(NULL)
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(69): coin->getAcc(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[15-Dec-2021 17:35:19 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(139): coin->getid(NULL)
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(69): coin->getAcc(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[15-Dec-2021 17:35:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(139): coin->getid(NULL)
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(69): coin->getAcc(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[15-Dec-2021 17:35:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(139): coin->getid(NULL)
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(69): coin->getAcc(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[15-Dec-2021 22:26:24 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[15-Dec-2021 22:28:29 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[16-Dec-2021 04:24:15 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[16-Dec-2021 04:27:40 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[16-Dec-2021 07:09:37 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[16-Dec-2021 08:19:50 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 08:19:50 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 09:57:59 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[16-Dec-2021 10:05:42 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[16-Dec-2021 11:54:28 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 11:54:28 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 11:54:28 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 17:17:37 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:01:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:01:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:01:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:02:58 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[16-Dec-2021 23:16:09 America/New_York] PHP Deprecated:  Non-static method mail::SignupMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 698
+[16-Dec-2021 23:45:59 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[16-Dec-2021 23:55:26 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:55:26 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:55:26 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:55:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:55:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:55:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:01 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:01 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:01 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:22 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:22 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:22 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[16-Dec-2021 23:56:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 00:26:32 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 00:26:32 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 00:26:32 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 00:27:02 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 00:27:02 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 00:27:02 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 01:01:14 America/New_York] PHP Warning:  A non-numeric value encountered in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 222
+[17-Dec-2021 01:51:26 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 01:51:26 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 01:51:26 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 01:52:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 01:52:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 01:52:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 02:19:53 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 02:33:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 02:33:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 02:33:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 02:42:27 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 02:47:54 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 02:51:35 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 05:28:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 05:28:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 05:28:40 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 05:48:22 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 05:48:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 05:48:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 05:48:58 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 06:13:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 06:13:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 06:13:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:00:46 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:00:46 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:00:46 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:00:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:00:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:00:53 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:22:21 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:22:21 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:22:21 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 07:28:20 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 07:30:14 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 07:46:31 America/New_York] PHP Warning:  unlink(uploads/https://stcbnk.com/bank/uploads/25555200_1639646892_20438203232.png): No such file or directory in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 611
+[17-Dec-2021 08:15:10 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 08:28:05 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 08:48:15 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:22 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:22 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:23 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:25 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:25 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:25 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:27 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:29 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:29 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:29 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:30 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:30 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:30 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:32 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:32 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:32 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:36 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:36 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:48:36 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:55:06 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(646): Firebase\JWT\JWT::decode(NULL, 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/baseApi.php(369): coin->getU(NULL)
+#2 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:55:06 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(43): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(24): coin->card(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 08:55:06 America/New_York] PHP Fatal error:  Uncaught UnexpectedValueException: Wrong number of segments in /home/stcbhsjm/public_html/bank/jwt/JWT.php:78
+Stack trace:
+#0 /home/stcbhsjm/public_html/bank/ApiFunct.php(1952): Firebase\JWT\JWT::decode('', 'otuonynoye', Array)
+#1 /home/stcbhsjm/public_html/bank/ApiFunct.php(55): coin->getid('')
+#2 /home/stcbhsjm/public_html/bank/baseApi.php(31): coin->bankaccounts(Array)
+#3 {main}
+  thrown in /home/stcbhsjm/public_html/bank/jwt/JWT.php on line 78
+[17-Dec-2021 09:06:42 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
+[17-Dec-2021 09:08:47 America/New_York] PHP Deprecated:  Non-static method mail::TransMail() should not be called statically in /home/stcbhsjm/public_html/bank/ApiFunct.php on line 164
